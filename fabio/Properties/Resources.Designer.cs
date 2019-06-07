@@ -63,6 +63,16 @@ namespace fabio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fabio_logo_grande_fondo {
+            get {
+                object obj = ResourceManager.GetObject("fabio logo grande fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_fabio_vectorizado {
             get {
                 object obj = ResourceManager.GetObject("logo fabio vectorizado", resourceCulture);
