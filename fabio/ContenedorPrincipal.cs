@@ -21,5 +21,27 @@ namespace fabio
         {
 
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            pictureBox2.Visible = false;
+
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+        }
     }
 }
