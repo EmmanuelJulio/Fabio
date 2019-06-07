@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace fabio
 {
-    public partial class Form1 : Form
+    public partial class ContenedorPrincipal : Form
     {
-        public Form1()
+        public ContenedorPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void ContenedorPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
