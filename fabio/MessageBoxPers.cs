@@ -20,7 +20,7 @@ namespace fabio
         public MessageBoxPers(string sms,Messagetype type)
         {
             InitializeComponent();
-            Show.Start();
+            Show2.Start();
             bunifuCustomLabel1.Text = sms;
             switch (type)
             {
@@ -73,7 +73,7 @@ namespace fabio
             }
             else
             {
-                Show.Stop();
+                Show2.Stop();
             }
         }
 

@@ -41,9 +41,10 @@ namespace fabio
             this.panel1 = new System.Windows.Forms.Panel();
             this.PNL_Contenedor = new System.Windows.Forms.Panel();
             this.PNL_Modulos = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Panel_botones = new System.Windows.Forms.Panel();
             this.PNL_BarraControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -51,8 +52,8 @@ namespace fabio
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.PNL_Modulos.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNL_BarraControl
@@ -155,6 +156,7 @@ namespace fabio
             // PNL_Modulos
             // 
             this.PNL_Modulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.PNL_Modulos.Controls.Add(this.Panel_botones);
             this.PNL_Modulos.Controls.Add(this.panel2);
             this.PNL_Modulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.PNL_Modulos.Location = new System.Drawing.Point(0, 0);
@@ -162,21 +164,12 @@ namespace fabio
             this.PNL_Modulos.Size = new System.Drawing.Size(186, 413);
             this.PNL_Modulos.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 74);
-            this.panel2.TabIndex = 1;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::fabio.Properties.Resources.logo_fabio_vectorizado;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 13);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(165, 60);
+            this.pictureBox5.Size = new System.Drawing.Size(165, 68);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -187,6 +180,23 @@ namespace fabio
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.PNL_BarraControl;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // Panel_botones
+            // 
+            this.Panel_botones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_botones.Location = new System.Drawing.Point(0, 87);
+            this.Panel_botones.Name = "Panel_botones";
+            this.Panel_botones.Size = new System.Drawing.Size(186, 326);
+            this.Panel_botones.TabIndex = 1;
             // 
             // ContenedorPrincipal
             // 
@@ -208,8 +218,8 @@ namespace fabio
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.PNL_Modulos.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,7 +238,8 @@ namespace fabio
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Panel_botones;
     }
 }

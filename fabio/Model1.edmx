@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="bulonera2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="bulonera2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errores durante la generación:
 advertencia 6013: La tabla o vista 'bulonera2.dbo.COTAS_ODF' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
         <EntityType Name="COTAS_ODF">
@@ -236,6 +236,9 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_modulospermitidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_usuario" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -289,8 +292,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <End Role="SUBMODULOS" EntitySet="SUBMODULOS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bulonera2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -469,6 +471,9 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="sp_modulospermitidos" ReturnType="Collection(bulonera2Model.sp_modulospermitidos_Result)">
+            <Parameter Name="id_usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -480,6 +485,10 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_modulospermitidos_Result">
+          <Property Type="String" Name="NOMBRE_MOD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="COD_MOD" Nullable="true" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -598,6 +607,14 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bulonera2Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bulonera2Model.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_modulospermitidos" FunctionName="bulonera2Model.Store.sp_modulospermitidos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bulonera2Model.sp_modulospermitidos_Result">
+                <ScalarProperty Name="NOMBRE_MOD" ColumnName="NOMBRE_MOD" />
+                <ScalarProperty Name="COD_MOD" ColumnName="COD_MOD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

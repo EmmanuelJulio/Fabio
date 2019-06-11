@@ -13,7 +13,7 @@ namespace fabio
     public partial class Login : Form
     {
         public static string USUARIO;
-
+        public static int ID_usuario;
         public string GetUsuario()
         {
             return USUARIO;
@@ -132,6 +132,7 @@ namespace fabio
                     {
                         if(Ousuario.nombre_usuario==txtuser.Text & Ousuario.contraseña == txtpass.Text)
                         {
+                            ID_usuario = Ousuario.id_usuario;
                             usuario = true;
                             USUARIO = Ousuario.nombre_usuario;
                             MessageBoxPers.message("Acceso Autorizado", MessageBoxPers.Messagetype.Acceso);

@@ -138,5 +138,14 @@ namespace fabio
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
+    
+        public virtual ObjectResult<sp_modulospermitidos_Result> sp_modulospermitidos(Nullable<int> id_usuario)
+        {
+            var id_usuarioParameter = id_usuario.HasValue ?
+                new ObjectParameter("id_usuario", id_usuario) :
+                new ObjectParameter("id_usuario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_modulospermitidos_Result>("sp_modulospermitidos", id_usuarioParameter);
+        }
     }
 }

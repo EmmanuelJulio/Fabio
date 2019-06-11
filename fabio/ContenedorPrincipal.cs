@@ -1,4 +1,5 @@
-﻿using System;
+﻿using fabio.Procedures;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +21,25 @@ namespace fabio
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
         {
             string usu = Login.USUARIO;
+            int id_usu = Login.ID_usuario;
             using (EntityBulonera db = new EntityBulonera())
             {
+              var modulos= db.Database.SqlQuery<sp_modulospermitidos>("sp_modulospermitidos @p0",id_usu).ToList();
+                foreach (var Omodulo in modulos)
+                {
+                    Button boton = new Button();
+                    boton.Text = Omodulo.NOMBRE_MOD;
+                    boton.AccessibleName = Omodulo.COD_MOD;
+                    boton.Dock = DockStyle.Top;
+                    boton.Height = 40;
+                    boton.BackColor = Color.Aqua;
+                    boton.FlatStyle = FlatStyle.Flat;
 
-            //    var usurio_modulo = (from mod in db.MODULO_USUARIO.Join(db.USUARIOS, u => u.ID_USUARIO, us => us.id_usuario, (u, us) => new { u, us }).Where(z => z.u.ID_USUARIO == 1)select(*));
 
+
+
+                    Panel_botones.Controls.Add(boton);
+                }
             }
         }
 
