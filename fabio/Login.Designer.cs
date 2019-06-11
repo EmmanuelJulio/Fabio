@@ -38,16 +38,16 @@ namespace fabio
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.HORA = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.control = new System.Windows.Forms.FlowLayoutPanel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.BTN_INGRESAR = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.BTN_SALIR = new WindowsFormsControlLibrary1.BunifuThinButton();
-            this.HORA = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.Txt_pass = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.control.SuspendLayout();
@@ -70,6 +70,17 @@ namespace fabio
             this.panel1.Size = new System.Drawing.Size(182, 262);
             this.panel1.TabIndex = 0;
             // 
+            // HORA
+            // 
+            this.HORA.AutoSize = true;
+            this.HORA.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORA.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HORA.Location = new System.Drawing.Point(21, 212);
+            this.HORA.Name = "HORA";
+            this.HORA.Size = new System.Drawing.Size(133, 33);
+            this.HORA.TabIndex = 0;
+            this.HORA.Text = "hh:mm:ss";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::fabio.Properties.Resources.fabio_logo_grande_fondo;
@@ -89,6 +100,17 @@ namespace fabio
             this.control.Name = "control";
             this.control.Size = new System.Drawing.Size(456, 34);
             this.control.TabIndex = 3;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(220, 33);
+            this.bunifuCustomLabel1.TabIndex = 1;
+            this.bunifuCustomLabel1.Text = "Inicio de secion";
             // 
             // bunifuDragControl2
             // 
@@ -136,17 +158,6 @@ namespace fabio
             this.BTN_SALIR.TabIndex = 5;
             this.BTN_SALIR.Click += new System.EventHandler(this.BTN_SALIR_Click);
             // 
-            // HORA
-            // 
-            this.HORA.AutoSize = true;
-            this.HORA.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.HORA.Location = new System.Drawing.Point(21, 212);
-            this.HORA.Name = "HORA";
-            this.HORA.Size = new System.Drawing.Size(133, 33);
-            this.HORA.TabIndex = 0;
-            this.HORA.Text = "hh:mm:ss";
-            // 
             // timerHora
             // 
             this.timerHora.Enabled = true;
@@ -156,40 +167,27 @@ namespace fabio
             // 
             this.txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_usuario.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txt_usuario.Location = new System.Drawing.Point(256, 70);
+            this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_usuario.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_usuario.Location = new System.Drawing.Point(191, 55);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(272, 36);
+            this.txt_usuario.Size = new System.Drawing.Size(272, 24);
             this.txt_usuario.TabIndex = 6;
-            this.txt_usuario.Text = "USUARIO";
-            this.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_usuario.Text = "Usuario";
             this.txt_usuario.Click += new System.EventHandler(this.Txt_usuario_Click);
             // 
             // Txt_pass
             // 
             this.Txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.Txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_pass.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_pass.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Txt_pass.Location = new System.Drawing.Point(256, 119);
+            this.Txt_pass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_pass.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Txt_pass.Location = new System.Drawing.Point(191, 97);
             this.Txt_pass.Name = "Txt_pass";
-            this.Txt_pass.Size = new System.Drawing.Size(272, 36);
+            this.Txt_pass.Size = new System.Drawing.Size(272, 24);
             this.Txt_pass.TabIndex = 7;
-            this.Txt_pass.Text = "CONTRACEÑA";
-            this.Txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txt_pass.Text = "Contraceña";
             this.Txt_pass.Click += new System.EventHandler(this.Txt_pass_Click_1);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(220, 33);
-            this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Inicio de secion";
             // 
             // Login
             // 
