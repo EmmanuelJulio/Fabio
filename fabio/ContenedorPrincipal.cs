@@ -19,7 +19,13 @@ namespace fabio
 
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
         {
+            string usu = Login.USUARIO;
+            using (EntityBulonera db = new EntityBulonera())
+            {
 
+            //    var usurio_modulo = (from mod in db.MODULO_USUARIO.Join(db.USUARIOS, u => u.ID_USUARIO, us => us.id_usuario, (u, us) => new { u, us }).Where(z => z.u.ID_USUARIO == 1)select(*));
+
+            }
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)

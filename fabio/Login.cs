@@ -12,6 +12,14 @@ namespace fabio
 {
     public partial class Login : Form
     {
+        public static string USUARIO;
+
+        public string GetUsuario()
+        {
+            return USUARIO;
+        }
+
+
         public Login()
         {
             InitializeComponent();
@@ -125,6 +133,7 @@ namespace fabio
                         if(Ousuario.nombre_usuario==txtuser.Text & Ousuario.contraseña == txtpass.Text)
                         {
                             usuario = true;
+                            USUARIO = Ousuario.nombre_usuario;
                             MessageBoxPers.message("Acceso Autorizado", MessageBoxPers.Messagetype.Acceso);
                            
                             ContenedorPrincipal cp = new ContenedorPrincipal();
@@ -144,7 +153,7 @@ namespace fabio
                 txtpass.Text = "Contraseña";
                 txtuser.Text = "Usuario";
                 txtpass.UseSystemPasswordChar = false;
-                MessageBox.Show("no se encontro el usuario o la contraceña es incorrecta");
+                
                     MessageBoxPers.message("no se encontro el usuario o la contraceña es incorrecta", MessageBoxPers.Messagetype.Error);
                     
                 }

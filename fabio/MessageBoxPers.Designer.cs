@@ -39,7 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Show = new System.Windows.Forms.Timer(this.components);
+            this.Show2 = new System.Windows.Forms.Timer(this.components);
             this.hide = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,7 +146,7 @@
             // 
             // Show
             // 
-            this.Show.Tick += new System.EventHandler(this.Show_Tick);
+            this.Show2.Tick += new System.EventHandler(this.Show_Tick);
             // 
             // hide
             // 
@@ -192,7 +192,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox icon;
         private System.Windows.Forms.ImageList listicon;
-        private System.Windows.Forms.Timer Show;
+        private System.Windows.Forms.Timer Show2;
         private System.Windows.Forms.Timer hide;
     }
 }
