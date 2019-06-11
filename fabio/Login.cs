@@ -125,23 +125,29 @@ namespace fabio
                         if(Ousuario.nombre_usuario==txtuser.Text & Ousuario.contraseña == txtpass.Text)
                         {
                             usuario = true;
-                            MessageBox.Show("bienvenido");
+                            MessageBoxPers.message("Acceso Autorizado", MessageBoxPers.Messagetype.Acceso);
+                           
                             ContenedorPrincipal cp = new ContenedorPrincipal();
                             cp.Show();
                             this.Hide();
                             break;
 
                         }
-                        txtpass.Text = "Contraseña";
-                        txtuser.Text = "Usuario";
-                        txtpass.UseSystemPasswordChar = false;
-                            
-                        MessageBox.Show("no se encontro el usuario o la contraceña es incorrecta");
-                        break;
+                 
+                       
                     }
+                    
                     break;
                 }
-               
+                if (usuario == false)
+                {
+                txtpass.Text = "Contraseña";
+                txtuser.Text = "Usuario";
+                txtpass.UseSystemPasswordChar = false;
+                MessageBox.Show("no se encontro el usuario o la contraceña es incorrecta");
+                    MessageBoxPers.message("no se encontro el usuario o la contraceña es incorrecta", MessageBoxPers.Messagetype.Error);
+                    
+                }
             }
         }
     }

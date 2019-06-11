@@ -38,19 +38,19 @@ namespace fabio
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.HORA = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.control = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.HORA = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.control = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.btnlogin = new System.Windows.Forms.Button();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.control.SuspendLayout();
@@ -74,16 +74,16 @@ namespace fabio
             this.panel1.Size = new System.Drawing.Size(182, 262);
             this.panel1.TabIndex = 0;
             // 
-            // HORA
+            // bunifuCustomLabel1
             // 
-            this.HORA.AutoSize = true;
-            this.HORA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HORA.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.HORA.Location = new System.Drawing.Point(508, 236);
-            this.HORA.Name = "HORA";
-            this.HORA.Size = new System.Drawing.Size(68, 17);
-            this.HORA.TabIndex = 0;
-            this.HORA.Text = "hh:mm:ss";
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 3);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(125, 20);
+            this.bunifuCustomLabel1.TabIndex = 1;
+            this.bunifuCustomLabel1.Text = "Inicio de secion";
             // 
             // pictureBox2
             // 
@@ -94,6 +94,17 @@ namespace fabio
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // HORA
+            // 
+            this.HORA.AutoSize = true;
+            this.HORA.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HORA.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.HORA.Location = new System.Drawing.Point(508, 236);
+            this.HORA.Name = "HORA";
+            this.HORA.Size = new System.Drawing.Size(68, 17);
+            this.HORA.TabIndex = 0;
+            this.HORA.Text = "hh:mm:ss";
             // 
             // control
             // 
@@ -106,16 +117,16 @@ namespace fabio
             this.control.Size = new System.Drawing.Size(397, 34);
             this.control.TabIndex = 3;
             // 
-            // bunifuCustomLabel1
+            // pictureBox1
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 3);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(125, 20);
-            this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Inicio de secion";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(360, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // bunifuDragControl2
             // 
@@ -175,17 +186,6 @@ namespace fabio
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtuser_KeyPress);
             this.txtuser.Leave += new System.EventHandler(this.Txtuser_Leave_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(360, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
@@ -198,18 +198,6 @@ namespace fabio
             this.shapeContainer1.TabIndex = 11;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape1.Tag = "0; 150; 240";
-            this.lineShape1.X1 = 204;
-            this.lineShape1.X2 = 486;
-            this.lineShape1.Y1 = 90;
-            this.lineShape1.Y2 = 90;
-            // 
             // lineShape2
             // 
             this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
@@ -221,6 +209,18 @@ namespace fabio
             this.lineShape2.X2 = 487;
             this.lineShape2.Y1 = 140;
             this.lineShape2.Y2 = 140;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape1.Tag = "0; 150; 240";
+            this.lineShape1.X1 = 204;
+            this.lineShape1.X2 = 486;
+            this.lineShape1.Y1 = 90;
+            this.lineShape1.Y2 = 90;
             // 
             // Login
             // 
@@ -238,6 +238,7 @@ namespace fabio
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.Opacity = 0D;

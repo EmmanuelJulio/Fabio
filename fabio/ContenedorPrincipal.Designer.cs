@@ -196,6 +196,7 @@ namespace fabio
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PNL_BarraControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ContenedorPrincipal";
             this.Text = "ContenedorPrincipal";
             this.Load += new System.EventHandler(this.ContenedorPrincipal_Load);
