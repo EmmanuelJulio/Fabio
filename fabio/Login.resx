@@ -120,10 +120,65 @@
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 140, 282, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 140</value>
+  </metadata>
+  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 0</value>
+  </metadata>
+  <metadata name="lineShape1.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 90, 282, 0</value>
+  </metadata>
+  <metadata name="lineShape1.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 90</value>
+  </metadata>
+  <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 0</value>
+  </metadata>
   <metadata name="bunifuDragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>149, 17</value>
   </metadata>
   <metadata name="timerHora.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>317, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALuSURBVHhe7ZzNihNBFIXjP+qAMk/iSp9L0X3Wiq7cBHEWcSDdDRIhkG0UXSgivspsXAwI8d7h
+        ljRlT3d1d1Vue+t8cGDoVHXnni8ZksyQGQAAAAAAAAAAAAAAAAAwYaqqulmW5W+k/CWVHJbtdnuLLr5H
+        ynOp5LBAwN9AgHIgQDkQoJzJCTjf7XbXrWWz2dxpmPViXqnksLQJkCWmmNy8EKA8LwQozwsByvNCgPK8
+        EKA8LwQozwsByvNCgPK8se9QURTPae/b+Xx+VQ5Fp6qqI8oHygM5FIxpAbTnRW1/EglU+jGd+4dc42y1
+        Wj2Sm4IwK4Ae+S8bzhFVgle+yxkdfyhLOjEpgNa+8vbWE0XCJeW7BEswJ4AGv0353rC/ntf7/f6KbOkN
+        nf+IzvHZO6efN7K8FZPPgOVyeZfWf/T2+xn0TOh45Lu8o3XXZEsrJgUwKSTELp8xK4CJKSFF+YxpAUwM
+        CanKZ8wLYMZISFk+k4UAZoiE1OUz2Qhg+kg4RPlMVgKYQAmnlOTlM9kJYAIltCVK+UyWApgREqKVz2Qr
+        gBkgIWr5TNYCGJHwxbvWPymK4jR2+Uz2AqhUfrXz07tWU05C3jH3JWsBUn7Xq516gj626EO2AgaU7xJV
+        QpYCRpTvEk1CdgICy19RPnnH/ESRkJWAwPIvXmoGvkQdLSEbAX3Kly2h7xNGSchCwJDyHaklmBcwpnxH
+        SgmmBcQo35FKglkBMct3pJBgUkCK8h2xJZgTkLJ8x3q9vk/7o/zzl1UBl364Rre/XywWN2T5YLqeCXSd
+        Z7K0FXMCGBr+HuVrwzlGPfJ9WiQ8lSWdmBTAsATa8622P2r5Dl8CXeOJ3BSEWQFMTUKS8h01CY/lUDCm
+        BTBU/HGM3/ld8P2WH3thXsDUgQBlIEAZCFAGApSBAGUgQBkIUAYClPmfBHCavmPZQppmnaSAnAIByoEA
+        5UCAciBAOToCmKbvWM4tKf+ABAAAAAAAAAAAAAAAAFaYzf4AKABW0mGZxK0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="lineShape1.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 90, 282, 0</value>
+  </metadata>
+  <metadata name="lineShape1.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 90</value>
+  </metadata>
+  <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 140, 282, 0</value>
+  </metadata>
+  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 140</value>
+  </metadata>
+  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 0</value>
   </metadata>
 </root>

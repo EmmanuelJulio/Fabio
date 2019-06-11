@@ -89,6 +89,57 @@ namespace fabio
                 txtpass.UseSystemPasswordChar = false;
             }
         }
+
+        private void Txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar.ToString()=="\r")
+            {
+                txtpass.Focus();
+            }
+        }
+
+        private void Txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.ToString() == "\r")
+            {
+                btnlogin.Focus();
+            }
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void Btnlogin_Click(object sender, EventArgs e)
+        {
+            using(EntityBulonera db = new EntityBulonera())
+            {
+                var list = db.USUARIOS;
+                bool usuario=false;
+                while (usuario== false)
+                {
+                    foreach (var Ousuario in list)
+                    {
+                        if(Ousuario.nombre_usuario==txtuser.Text & Ousuario.contraseña == txtpass.Text)
+                        {
+                            usuario = true;
+                            MessageBox.Show("bienvenido");
+                            ContenedorPrincipal cp = new ContenedorPrincipal();
+                            cp.Show();
+                            this.Hide();
+                            break;
+
+                        }
+                        MessageBox.Show("no se encontro el usuario o la contraceña es incorrecta");
+                        break;
+                    }
+                    break;
+                }
+               
+            }
+        }
     }
 }
 
