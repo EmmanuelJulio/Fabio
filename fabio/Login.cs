@@ -39,17 +39,56 @@ namespace fabio
 
         }
 
-    
-       
 
-        private void Txt_usuario_Click(object sender, EventArgs e)
+
+
+        private void btncerrar_Click(object sender, EventArgs e)
         {
-            txt_usuario.Text = "";
+            Application.Exit();
         }
-     
-        private void Txt_pass_Click_1(object sender, EventArgs e)
+
+        private void btnminimizar_Click(object sender, EventArgs e)
         {
-            Txt_pass.Text = "";
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Txtuser_Enter_1(object sender, EventArgs e)
+        {
+            if (txtuser.Text == "Usuario")
+            {
+                txtuser.Text = "";
+                txtuser.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void Txtuser_Leave_1(object sender, EventArgs e)
+        {
+            if (txtuser.Text == "")
+            {
+                txtuser.Text = "Usuario";
+                txtuser.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Txtpass_Enter_1(object sender, EventArgs e)
+        {
+            if (txtpass.Text == "Contraseña")
+            {
+                txtpass.Text = "";
+                txtpass.ForeColor = Color.LightGray;
+                txtpass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void Txtpass_Leave(object sender, EventArgs e)
+        {
+            if (txtpass.Text == "")
+            {
+                txtpass.Text = "Contraseña";
+                txtpass.ForeColor = Color.Silver;
+                txtpass.UseSystemPasswordChar = false;
+            }
         }
     }
 }
+
