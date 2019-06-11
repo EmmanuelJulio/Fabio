@@ -32,7 +32,7 @@ namespace fabio
             HORA.Text = DateTime.Now.ToLongTimeString();
             if (this.Opacity !=  100)
             {
-                this.Opacity =this.Opacity+0.1;
+                this.Opacity =this.Opacity+0.2;
             }
 
 
@@ -132,6 +132,10 @@ namespace fabio
                             break;
 
                         }
+                        txtpass.Text = "Contraseña";
+                        txtuser.Text = "Usuario";
+                        txtpass.UseSystemPasswordChar = false;
+                            
                         MessageBox.Show("no se encontro el usuario o la contraceña es incorrecta");
                         break;
                     }
