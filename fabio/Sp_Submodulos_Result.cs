@@ -10,13 +10,10 @@
 namespace fabio
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class DICCIONARIO
+    public partial class Sp_Submodulos_Result
     {
-        public int dic_cab { get; set; }
-        public int dic_cod { get; set; }
-        public string dic_des { get; set; }
-        public string dic_abr { get; set; }
+        public string NOMBRE_SUBMOD { get; set; }
+        public string SYS_NOM { get; set; }
     }
 }

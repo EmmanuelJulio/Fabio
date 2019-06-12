@@ -38,9 +38,13 @@ namespace fabio
         private void TimerHora_Tick(object sender, EventArgs e)
         {
             HORA.Text = DateTime.Now.ToLongTimeString();
-            if (this.Opacity !=  100)
+            if (this.Opacity !=  1)
             {
                 this.Opacity =this.Opacity+0.2;
+            }
+            else
+            {
+                HORA.Enabled = false;
             }
 
 

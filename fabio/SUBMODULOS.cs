@@ -14,11 +14,19 @@ namespace fabio
     
     public partial class SUBMODULOS
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SUBMODULOS()
+        {
+            this.SUBMENU = new HashSet<SUBMENU>();
+        }
+    
         public int ID_SUBMODULO { get; set; }
         public string NOMBRE_SUBMOD { get; set; }
         public string SYS_NOM { get; set; }
         public Nullable<int> ID_MODULO { get; set; }
     
         public virtual MODULOS MODULOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUBMENU> SUBMENU { get; set; }
     }
 }

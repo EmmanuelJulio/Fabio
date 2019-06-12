@@ -29,12 +29,10 @@ namespace fabio
     
         public virtual DbSet<MODULO_USUARIO> MODULO_USUARIO { get; set; }
         public virtual DbSet<MODULOS> MODULOS { get; set; }
+        public virtual DbSet<SUBMENU> SUBMENU { get; set; }
         public virtual DbSet<SUBMODULOS> SUBMODULOS { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
-        public virtual DbSet<COTAS_PRODUCTO> COTAS_PRODUCTO { get; set; }
-        public virtual DbSet<COTASXLINEA> COTASXLINEA { get; set; }
-        public virtual DbSet<DICCIONARIO> DICCIONARIO { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -146,6 +144,15 @@ namespace fabio
                 new ObjectParameter("id_usuario", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_modulospermitidos_Result>("sp_modulospermitidos", id_usuarioParameter);
+        }
+    
+        public virtual ObjectResult<Sp_Submodulos_Result> Sp_Submodulos(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_Submodulos_Result>("Sp_Submodulos", nombreParameter);
         }
     }
 }

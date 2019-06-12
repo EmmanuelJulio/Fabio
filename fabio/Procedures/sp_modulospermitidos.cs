@@ -11,4 +11,9 @@ namespace fabio.Procedures
         public string NOMBRE_MOD { get; set; }
         public string COD_MOD { get; set; }
     }
+    class Sp_Submodulos
+    {
+        public string NOMBRE_SUBMOD { get; set; }
+        public string SYS_NOM { get; set; }
+    }
 }

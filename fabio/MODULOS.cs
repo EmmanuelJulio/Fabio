@@ -18,7 +18,6 @@ namespace fabio
         public MODULOS()
         {
             this.MODULO_USUARIO = new HashSet<MODULO_USUARIO>();
-            this.SUBMODULOS = new HashSet<SUBMODULOS>();
         }
     
         public int ID_MODULO { get; set; }
@@ -28,7 +27,6 @@ namespace fabio
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MODULO_USUARIO> MODULO_USUARIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUBMODULOS> SUBMODULOS { get; set; }
+        public virtual SUBMODULOS SUBMODULOS { get; set; }
     }
 }

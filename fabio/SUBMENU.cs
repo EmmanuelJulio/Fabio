@@ -12,12 +12,13 @@ namespace fabio
     using System;
     using System.Collections.Generic;
     
-    public partial class COTAS_PRODUCTO
+    public partial class SUBMENU
     {
-        public string codigo_cot { get; set; }
-        public int cota_cot { get; set; }
-        public Nullable<double> maximo_cot { get; set; }
-        public Nullable<double> minimo_cot { get; set; }
-        public Nullable<int> control_cot { get; set; }
+        public int id_SubMenu { get; set; }
+        public string subMenu_nombre { get; set; }
+        public string subMenu_Sys { get; set; }
+        public int ID_SUBMODULO { get; set; }
+    
+        public virtual SUBMODULOS SUBMODULOS { get; set; }
     }
 }
