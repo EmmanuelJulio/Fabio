@@ -40,6 +40,8 @@ namespace fabio
         //pero en el programa seran buton
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
         {
+            cabezera.Width = 280;
+            Panel_botones.Width = 280;
             pnl_submodulos.Width = 1;
             Pnl_subsubmdoulos.Width = 1;
             string usu = Login.USUARIO;
@@ -218,6 +220,11 @@ namespace fabio
             Btn_volvermodulos.Visible = true;
 
             Deslizar(Pnl_subsubmdoulos, pnl_submodulos);
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
