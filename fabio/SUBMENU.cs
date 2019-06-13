@@ -15,7 +15,7 @@ namespace fabio
     public partial class SUBMENU
     {
         public int id_SubMenu { get; set; }
-        public string subMenu_nombre { get; set; }
+        public Nullable<int> subMenu_nombre { get; set; }
         public string subMenu_Sys { get; set; }
         public int ID_SUBMODULO { get; set; }
     

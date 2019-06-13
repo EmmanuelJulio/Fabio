@@ -9,18 +9,18 @@
           <Key>
             <PropertyRef Name="ID_PERMISO" />
           </Key>
-          <Property Name="ID_PERMISO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PERMISO" Type="int" Nullable="false" />
           <Property Name="ID_USUARIO" Type="int" />
-          <Property Name="ID_MODULO" Type="int" />
+          <Property Name="ID_MODULO" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="MODULOS">
           <Key>
             <PropertyRef Name="ID_MODULO" />
           </Key>
-          <Property Name="ID_MODULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_MODULO" Type="int" Nullable="false" />
           <Property Name="NOMBRE_MOD" Type="varchar" MaxLength="50" />
           <Property Name="COD_MOD" Type="varchar" MaxLength="50" />
-          <Property Name="SECTOR_MOD" Type="int" />
+          <Property Name="SECTOR_MOD" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
 advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
@@ -35,7 +35,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <PropertyRef Name="id_SubMenu" />
           </Key>
           <Property Name="id_SubMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="subMenu_nombre" Type="varchar" MaxLength="50" />
+          <Property Name="subMenu_nombre" Type="int" />
           <Property Name="subMenu_Sys" Type="varchar" MaxLength="50" />
           <Property Name="ID_SUBMODULO" Type="int" Nullable="false" />
         </EntityType>
@@ -43,18 +43,22 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Key>
             <PropertyRef Name="ID_SUBMODULO" />
           </Key>
-          <Property Name="ID_SUBMODULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_SUBMODULO" Type="int" Nullable="false" />
           <Property Name="NOMBRE_SUBMOD" Type="varchar" MaxLength="50" />
           <Property Name="SYS_NOM" Type="varchar" MaxLength="50" />
           <Property Name="ID_MODULO" Type="int" />
         </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'bulonera2.dbo.sysdiagrams' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="sysdiagrams">
           <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
             <PropertyRef Name="diagram_id" />
           </Key>
           <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
@@ -62,7 +66,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
-          <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="nombre_usuario" Type="varchar" MaxLength="50" />
           <Property Name="contraseña" Type="varchar" MaxLength="50" />
           <Property Name="apellido" Type="varchar" MaxLength="50" />
@@ -71,7 +75,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Property Name="acceso" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_MODULO/USUARIO_MODULOS">
-          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="1" />
           <End Role="MODULO/USUARIO" Type="Self.MODULO/USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MODULOS">
@@ -82,7 +86,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MODULO/USUARIO_USUARIOS1">
+        <Association Name="FK_MODULO/USUARIO_USUARIOS">
           <End Role="USUARIOS" Type="Self.USUARIOS" Multiplicity="0..1" />
           <End Role="MODULO/USUARIO" Type="Self.MODULO/USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -107,14 +111,14 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SUBMODULOS_MODULOS">
-          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="1" />
-          <End Role="SUBMODULOS" Type="Self.SUBMODULOS" Multiplicity="0..1" />
+          <End Role="MODULOS" Type="Self.MODULOS" Multiplicity="0..1" />
+          <End Role="SUBMODULOS" Type="Self.SUBMODULOS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MODULOS">
               <PropertyRef Name="ID_MODULO" />
             </Principal>
             <Dependent Role="SUBMODULOS">
-              <PropertyRef Name="ID_SUBMODULO" />
+              <PropertyRef Name="ID_MODULO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -143,16 +147,10 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_modulospermitidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id_usuario" Type="int" Mode="In" />
-        </Function>
         <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="Sp_Submodulos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Nombre" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="bulonera2ModelStoreContainer">
@@ -160,13 +158,21 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <EntitySet Name="MODULOS" EntityType="Self.MODULOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SUBMENU" EntityType="Self.SUBMENU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SUBMODULOS" EntityType="Self.SUBMODULOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysdiagrams].[name] AS [name], 
+    [sysdiagrams].[principal_id] AS [principal_id], 
+    [sysdiagrams].[diagram_id] AS [diagram_id], 
+    [sysdiagrams].[version] AS [version], 
+    [sysdiagrams].[definition] AS [definition]
+    FROM [dbo].[sysdiagrams] AS [sysdiagrams]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_MODULO/USUARIO_MODULOS" Association="Self.FK_MODULO/USUARIO_MODULOS">
             <End Role="MODULOS" EntitySet="MODULOS" />
             <End Role="MODULO/USUARIO" EntitySet="MODULO/USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK_MODULO/USUARIO_USUARIOS1" Association="Self.FK_MODULO/USUARIO_USUARIOS1">
+          <AssociationSet Name="FK_MODULO/USUARIO_USUARIOS" Association="Self.FK_MODULO/USUARIO_USUARIOS">
             <End Role="USUARIOS" EntitySet="USUARIOS" />
             <End Role="MODULO/USUARIO" EntitySet="MODULO/USUARIO" />
           </AssociationSet>
@@ -183,7 +189,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bulonera2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="EntityBulonera" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EntityBulonera2" annotation:LazyLoadingEnabled="true">
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -214,23 +220,17 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
-          <FunctionImport Name="sp_modulospermitidos" ReturnType="Collection(bulonera2Model.sp_modulospermitidos_Result)">
-          <Parameter Name="id_usuario" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="Sp_Submodulos" ReturnType="Collection(bulonera2Model.Sp_Submodulos_Result)">
-          <Parameter Name="Nombre" Mode="In" Type="String" />
-          </FunctionImport>
           <EntitySet Name="MODULO_USUARIO" EntityType="bulonera2Model.MODULO_USUARIO" />
           <EntitySet Name="MODULOS" EntityType="bulonera2Model.MODULOS" />
           <EntitySet Name="SUBMENU" EntityType="bulonera2Model.SUBMENU" />
           <EntitySet Name="SUBMODULOS" EntityType="bulonera2Model.SUBMODULOS" />
-          <EntitySet Name="sysdiagrams" EntityType="bulonera2Model.sysdiagrams" />
           <EntitySet Name="USUARIOS" EntityType="bulonera2Model.USUARIOS" />
+          <EntitySet Name="sysdiagrams" EntityType="bulonera2Model.sysdiagrams" />
           <AssociationSet Name="FK_MODULO_USUARIO_MODULOS" Association="bulonera2Model.FK_MODULO_USUARIO_MODULOS">
             <End Role="MODULOS" EntitySet="MODULOS" />
             <End Role="MODULO_USUARIO" EntitySet="MODULO_USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK_MODULO_USUARIO_USUARIOS1" Association="bulonera2Model.FK_MODULO_USUARIO_USUARIOS1">
+          <AssociationSet Name="FK_MODULO_USUARIO_USUARIOS" Association="bulonera2Model.FK_MODULO_USUARIO_USUARIOS">
             <End Role="USUARIOS" EntitySet="USUARIOS" />
             <End Role="MODULO_USUARIO" EntitySet="MODULO_USUARIO" />
           </AssociationSet>
@@ -242,7 +242,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <End Role="SUBMODULOS" EntitySet="SUBMODULOS" />
             <End Role="SUBMENU" EntitySet="SUBMENU" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -254,32 +254,24 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
-        <ComplexType Name="sp_modulospermitidos_Result">
-          <Property Type="String" Name="NOMBRE_MOD" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="COD_MOD" Nullable="true" MaxLength="50" />
-        </ComplexType>
-        <ComplexType Name="Sp_Submodulos_Result">
-          <Property Type="String" Name="NOMBRE_SUBMOD" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="SYS_NOM" Nullable="true" MaxLength="50" />
-        </ComplexType>
         <EntityType Name="MODULO_USUARIO">
           <Key>
             <PropertyRef Name="ID_PERMISO" />
           </Key>
-          <Property Name="ID_PERMISO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PERMISO" Type="Int32" Nullable="false" />
           <Property Name="ID_USUARIO" Type="Int32" />
-          <Property Name="ID_MODULO" Type="Int32" />
+          <Property Name="ID_MODULO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="MODULOS" Relationship="bulonera2Model.FK_MODULO_USUARIO_MODULOS" FromRole="MODULO_USUARIO" ToRole="MODULOS" />
-          <NavigationProperty Name="USUARIOS" Relationship="bulonera2Model.FK_MODULO_USUARIO_USUARIOS1" FromRole="MODULO_USUARIO" ToRole="USUARIOS" />
+          <NavigationProperty Name="USUARIOS" Relationship="bulonera2Model.FK_MODULO_USUARIO_USUARIOS" FromRole="MODULO_USUARIO" ToRole="USUARIOS" />
         </EntityType>
         <EntityType Name="MODULOS">
           <Key>
             <PropertyRef Name="ID_MODULO" />
           </Key>
-          <Property Name="ID_MODULO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_MODULO" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE_MOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="COD_MOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="SECTOR_MOD" Type="Int32" />
+          <Property Name="SECTOR_MOD" Type="Int32" Nullable="false" />
           <NavigationProperty Name="MODULO_USUARIO" Relationship="bulonera2Model.FK_MODULO_USUARIO_MODULOS" FromRole="MODULOS" ToRole="MODULO_USUARIO" />
           <NavigationProperty Name="SUBMODULOS" Relationship="bulonera2Model.FK_SUBMODULOS_MODULOS" FromRole="MODULOS" ToRole="SUBMODULOS" />
         </EntityType>
@@ -288,7 +280,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             <PropertyRef Name="id_SubMenu" />
           </Key>
           <Property Name="id_SubMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="subMenu_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="subMenu_nombre" Type="Int32" />
           <Property Name="subMenu_Sys" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ID_SUBMODULO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SUBMODULOS" Relationship="bulonera2Model.FK_SUBMENU_SUBMODULOS" FromRole="SUBMENU" ToRole="SUBMODULOS" />
@@ -297,38 +289,40 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           <Key>
             <PropertyRef Name="ID_SUBMODULO" />
           </Key>
-          <Property Name="ID_SUBMODULO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_SUBMODULO" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE_SUBMOD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SYS_NOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ID_MODULO" Type="Int32" />
           <NavigationProperty Name="MODULOS" Relationship="bulonera2Model.FK_SUBMODULOS_MODULOS" FromRole="SUBMODULOS" ToRole="MODULOS" />
           <NavigationProperty Name="SUBMENU" Relationship="bulonera2Model.FK_SUBMENU_SUBMODULOS" FromRole="SUBMODULOS" ToRole="SUBMENU" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="USUARIOS">
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
-          <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="nombre_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sector" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="acceso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="MODULO_USUARIO" Relationship="bulonera2Model.FK_MODULO_USUARIO_USUARIOS1" FromRole="USUARIOS" ToRole="MODULO_USUARIO" />
+          <NavigationProperty Name="MODULO_USUARIO" Relationship="bulonera2Model.FK_MODULO_USUARIO_USUARIOS" FromRole="USUARIOS" ToRole="MODULO_USUARIO" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_MODULO_USUARIO_MODULOS">
-          <End Type="bulonera2Model.MODULOS" Role="MODULOS" Multiplicity="0..1" />
+          <End Type="bulonera2Model.MODULOS" Role="MODULOS" Multiplicity="1" />
           <End Type="bulonera2Model.MODULO_USUARIO" Role="MODULO_USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MODULOS">
@@ -339,7 +333,7 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_MODULO_USUARIO_USUARIOS1">
+        <Association Name="FK_MODULO_USUARIO_USUARIOS">
           <End Type="bulonera2Model.USUARIOS" Role="USUARIOS" Multiplicity="0..1" />
           <End Type="bulonera2Model.MODULO_USUARIO" Role="MODULO_USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -352,14 +346,14 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SUBMODULOS_MODULOS">
-          <End Type="bulonera2Model.MODULOS" Role="MODULOS" Multiplicity="1" />
-          <End Type="bulonera2Model.SUBMODULOS" Role="SUBMODULOS" Multiplicity="0..1" />
+          <End Type="bulonera2Model.MODULOS" Role="MODULOS" Multiplicity="0..1" />
+          <End Type="bulonera2Model.SUBMODULOS" Role="SUBMODULOS" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MODULOS">
               <PropertyRef Name="ID_MODULO" />
             </Principal>
             <Dependent Role="SUBMODULOS">
-              <PropertyRef Name="ID_SUBMODULO" />
+              <PropertyRef Name="ID_MODULO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -375,12 +369,12 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="bulonera2ModelStoreContainer" CdmEntityContainer="EntityBulonera">
+        <EntityContainerMapping StorageEntityContainer="bulonera2ModelStoreContainer" CdmEntityContainer="EntityBulonera2">
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="bulonera2Model.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="bulonera2Model.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="bulonera2Model.Store.sp_dropdiagram" />
@@ -405,22 +399,6 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bulonera2Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bulonera2Model.Store.sp_upgraddiagrams" />
-          <FunctionImportMapping FunctionImportName="sp_modulospermitidos" FunctionName="bulonera2Model.Store.sp_modulospermitidos">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="bulonera2Model.sp_modulospermitidos_Result">
-                <ScalarProperty Name="NOMBRE_MOD" ColumnName="NOMBRE_MOD" />
-                <ScalarProperty Name="COD_MOD" ColumnName="COD_MOD" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="Sp_Submodulos" FunctionName="bulonera2Model.Store.Sp_Submodulos">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="bulonera2Model.Sp_Submodulos_Result">
-                <ScalarProperty Name="NOMBRE_SUBMOD" ColumnName="NOMBRE_SUBMOD" />
-                <ScalarProperty Name="SYS_NOM" ColumnName="SYS_NOM" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="MODULO_USUARIO">
             <EntityTypeMapping TypeName="bulonera2Model.MODULO_USUARIO">
               <MappingFragment StoreEntitySet="MODULO/USUARIO">
@@ -460,17 +438,6 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="bulonera2Model.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="USUARIOS">
             <EntityTypeMapping TypeName="bulonera2Model.USUARIOS">
               <MappingFragment StoreEntitySet="USUARIOS">
@@ -481,6 +448,17 @@ advertencia 6013: La tabla o vista 'bulonera2.dbo.prueba' no tiene definida una 
                 <ScalarProperty Name="contraseña" ColumnName="contraseña" />
                 <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="bulonera2Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

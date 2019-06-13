@@ -15,10 +15,10 @@ namespace fabio
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class EntityBulonera : DbContext
+    public partial class EntityBulonera2 : DbContext
     {
-        public EntityBulonera()
-            : base("name=EntityBulonera")
+        public EntityBulonera2()
+            : base("name=EntityBulonera2")
         {
         }
     
@@ -31,8 +31,8 @@ namespace fabio
         public virtual DbSet<MODULOS> MODULOS { get; set; }
         public virtual DbSet<SUBMENU> SUBMENU { get; set; }
         public virtual DbSet<SUBMODULOS> SUBMODULOS { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<USUARIOS> USUARIOS { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -135,24 +135,6 @@ namespace fabio
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
-        }
-    
-        public virtual ObjectResult<sp_modulospermitidos_Result> sp_modulospermitidos(Nullable<int> id_usuario)
-        {
-            var id_usuarioParameter = id_usuario.HasValue ?
-                new ObjectParameter("id_usuario", id_usuario) :
-                new ObjectParameter("id_usuario", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_modulospermitidos_Result>("sp_modulospermitidos", id_usuarioParameter);
-        }
-    
-        public virtual ObjectResult<Sp_Submodulos_Result> Sp_Submodulos(string nombre)
-        {
-            var nombreParameter = nombre != null ?
-                new ObjectParameter("Nombre", nombre) :
-                new ObjectParameter("Nombre", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_Submodulos_Result>("Sp_Submodulos", nombreParameter);
         }
     }
 }

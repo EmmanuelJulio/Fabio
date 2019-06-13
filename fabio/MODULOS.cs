@@ -18,15 +18,17 @@ namespace fabio
         public MODULOS()
         {
             this.MODULO_USUARIO = new HashSet<MODULO_USUARIO>();
+            this.SUBMODULOS = new HashSet<SUBMODULOS>();
         }
     
         public int ID_MODULO { get; set; }
         public string NOMBRE_MOD { get; set; }
         public string COD_MOD { get; set; }
-        public Nullable<int> SECTOR_MOD { get; set; }
+        public int SECTOR_MOD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MODULO_USUARIO> MODULO_USUARIO { get; set; }
-        public virtual SUBMODULOS SUBMODULOS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUBMODULOS> SUBMODULOS { get; set; }
     }
 }

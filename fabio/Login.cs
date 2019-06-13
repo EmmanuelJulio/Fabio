@@ -126,7 +126,7 @@ namespace fabio
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            using(EntityBulonera db = new EntityBulonera())
+            using(EntityBulonera2 db = new EntityBulonera2())
             {
                 var list = db.USUARIOS;
                 bool usuario=false;

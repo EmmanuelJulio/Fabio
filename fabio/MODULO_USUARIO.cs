@@ -16,7 +16,7 @@ namespace fabio
     {
         public int ID_PERMISO { get; set; }
         public Nullable<int> ID_USUARIO { get; set; }
-        public Nullable<int> ID_MODULO { get; set; }
+        public int ID_MODULO { get; set; }
     
         public virtual MODULOS MODULOS { get; set; }
         public virtual USUARIOS USUARIOS { get; set; }

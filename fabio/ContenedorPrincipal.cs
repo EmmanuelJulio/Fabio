@@ -22,7 +22,7 @@ namespace fabio
         {
             string usu = Login.USUARIO;
             int id_usu = Login.ID_usuario;
-            using (EntityBulonera db = new EntityBulonera())
+            using (EntityBulonera2 db = new EntityBulonera2())
             {
               var modulos= db.Database.SqlQuery<sp_modulospermitidos>("sp_modulospermitidos @p0",id_usu).ToList();
                 foreach (var Omodulo in modulos)
@@ -110,7 +110,7 @@ namespace fabio
             }
 
             string nombreSub = ((Button)sender).Text;
-            using (EntityBulonera db = new EntityBulonera())
+            using (EntityBulonera2 db = new EntityBulonera2())
             {
                 var submodulos = db.Database.SqlQuery<Sp_Submodulos>("Sp_Submodulos @p0", nombreSub).ToList();
                 foreach (var submoduli in submodulos)
