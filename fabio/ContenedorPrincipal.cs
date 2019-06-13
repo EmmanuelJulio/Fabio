@@ -13,25 +13,24 @@ namespace fabio
 {
     public partial class ContenedorPrincipal : Form
     {
+        public string moduloselecionado;
+        public string opcionseleccionada;
+        public string formularioseleccionado;
         public void Deslizar(Panel Aesconeder,Panel Amostrar)
         {
-            while (Aesconeder.Width > 1)
-            {
-                Aesconeder.Width -= 3;
-
-            }
-            while (Amostrar.Width < 280)
-            {
-                Amostrar.Width += 3;
-            }
-
-            //if (Aesconeder.Width == 280)
+            //while (Aesconeder.Width > 1)
             //{
-            //    Aesconeder.Width = 5;
-            //    PanelAnimator.HideSync(Aesconeder);
-            //    PanelAnimator.ShowSync(Amostrar);
-            //    Amostrar.Width = 280;
+            //    Aesconeder.Width -= 3;
+
             //}
+            //while (Amostrar.Width < 280)
+            //{
+            //    Amostrar.Width += 3;
+            //}
+                PanelAnimator.HideSync(Aesconeder);
+                PanelAnimator.ShowSync(Amostrar);
+            Amostrar.Width = 280;
+                
         }
         public ContenedorPrincipal()
         {
@@ -122,12 +121,14 @@ namespace fabio
 
         private void BotonSub_Click(object sender, EventArgs e)
         {
-            
+            Btn_volvermodulos.Visible = false;
+            Btn_volveropciones.Visible = true;
            // Deslisarmenu(PNL_Modulos);
             Pnl_subsubmdoulos.Controls.Clear();
 
             string nombreSub2 = ((Button)sender).Text;
             lbl_texto.Text = nombreSub2;
+            opcionseleccionada = nombreSub2;
            // lbl_SubSubmodulo.Text = nombreSub2;
             using (EntityBulonera2 db = new EntityBulonera2())
             {
@@ -165,10 +166,18 @@ namespace fabio
         private void Boton_Click(object sender, EventArgs e)
         {
             pnl_submodulos.Controls.Clear();
-            Btn_volvermodulos.Visible = true;
+            if (Panel_botones.Width > 4){
+                Btn_volvermodulos.Visible = true;
+            }
+            else{
+                Btn_volvermodulos.Visible = false;
+            }
+                
+            
             Btn_volveropciones.Visible = false;
-            string nombreSub = ((Button)sender).Text;
+             string nombreSub = ((Button)sender).Text;
             lbl_texto.Text = nombreSub;
+            moduloselecionado = nombreSub;
             using (EntityBulonera2 db = new EntityBulonera2())
             {
                 var submodulos = db.Database.SqlQuery<Sp_Submodulos>("Sp_Submodulos @p0", nombreSub).ToList();
@@ -204,6 +213,10 @@ namespace fabio
 
         private void Btn_volveropciones_Click_1(object sender, EventArgs e)
         {
+            lbl_texto.Text = moduloselecionado;
+            Btn_volveropciones.Visible = false;
+            Btn_volvermodulos.Visible = true;
+
             Deslizar(Pnl_subsubmdoulos, pnl_submodulos);
         }
     }
