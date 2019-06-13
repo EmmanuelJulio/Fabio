@@ -40,34 +40,37 @@ namespace fabio
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PNL_Contenedor = new System.Windows.Forms.Panel();
-            this.PNL_Modulos = new System.Windows.Forms.Panel();
-            this.Panel_botones = new System.Windows.Forms.Panel();
+            this.botonSub3 = new System.Windows.Forms.Button();
+            this.Btn_volvermodulos = new System.Windows.Forms.PictureBox();
             this.botonSub = new System.Windows.Forms.Button();
             this.boton = new System.Windows.Forms.Button();
-            this.pnl_submodulos = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_volver = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelAnimator = new BunifuAnimatorNS.Animator(this.components);
+            this.lbl_texto = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cabezera = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Panel_botones = new System.Windows.Forms.Panel();
+            this.pnl_submodulos = new System.Windows.Forms.Panel();
             this.Pnl_subsubmdoulos = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_SubSubmodulo = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Btn_volveropciones = new System.Windows.Forms.PictureBox();
             this.PNL_BarraControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.PNL_Modulos.SuspendLayout();
-            this.Panel_botones.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_volvermodulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.cabezera.SuspendLayout();
+            this.logo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.Panel_botones.SuspendLayout();
+            this.pnl_submodulos.SuspendLayout();
             this.Pnl_subsubmdoulos.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_volveropciones)).BeginInit();
             this.SuspendLayout();
             // 
             // PNL_BarraControl
@@ -162,10 +165,8 @@ namespace fabio
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuGradientPanel1);
-            this.panel1.Controls.Add(this.Pnl_subsubmdoulos);
-            this.panel1.Controls.Add(this.PNL_Contenedor);
-            this.panel1.Controls.Add(this.PNL_Modulos);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.cabezera);
             this.PanelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 30);
@@ -174,52 +175,40 @@ namespace fabio
             this.panel1.Size = new System.Drawing.Size(1083, 619);
             this.panel1.TabIndex = 2;
             // 
-            // PNL_Contenedor
+            // botonSub3
             // 
-            this.PNL_Contenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PNL_Contenedor.BackgroundImage")));
-            this.PNL_Contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.PanelAnimator.SetDecoration(this.PNL_Contenedor, BunifuAnimatorNS.DecorationType.None);
-            this.PNL_Contenedor.Location = new System.Drawing.Point(874, 231);
-            this.PNL_Contenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PNL_Contenedor.Name = "PNL_Contenedor";
-            this.PNL_Contenedor.Size = new System.Drawing.Size(209, 388);
-            this.PNL_Contenedor.TabIndex = 1;
-            this.PNL_Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PNL_Contenedor_Paint);
+            this.PanelAnimator.SetDecoration(this.botonSub3, BunifuAnimatorNS.DecorationType.None);
+            this.botonSub3.Location = new System.Drawing.Point(25, 238);
+            this.botonSub3.Name = "botonSub3";
+            this.botonSub3.Size = new System.Drawing.Size(163, 48);
+            this.botonSub3.TabIndex = 2;
+            this.botonSub3.Text = "Seleccion de frame";
+            this.botonSub3.UseVisualStyleBackColor = true;
+            this.botonSub3.Visible = false;
+            this.botonSub3.Click += new System.EventHandler(this.BotonSub3_Click);
             // 
-            // PNL_Modulos
+            // Btn_volvermodulos
             // 
-            this.PNL_Modulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.PNL_Modulos.Controls.Add(this.Panel_botones);
-            this.PNL_Modulos.Controls.Add(this.pnl_submodulos);
-            this.PNL_Modulos.Controls.Add(this.panel2);
-            this.PanelAnimator.SetDecoration(this.PNL_Modulos, BunifuAnimatorNS.DecorationType.None);
-            this.PNL_Modulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PNL_Modulos.Location = new System.Drawing.Point(0, 0);
-            this.PNL_Modulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PNL_Modulos.Name = "PNL_Modulos";
-            this.PNL_Modulos.Size = new System.Drawing.Size(289, 619);
-            this.PNL_Modulos.TabIndex = 0;
-            // 
-            // Panel_botones
-            // 
-            this.Panel_botones.Controls.Add(this.botonSub);
-            this.Panel_botones.Controls.Add(this.boton);
-            this.PanelAnimator.SetDecoration(this.Panel_botones, BunifuAnimatorNS.DecorationType.None);
-            this.Panel_botones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_botones.Location = new System.Drawing.Point(0, 88);
-            this.Panel_botones.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Panel_botones.Name = "Panel_botones";
-            this.Panel_botones.Size = new System.Drawing.Size(279, 531);
-            this.Panel_botones.TabIndex = 1;
+            this.PanelAnimator.SetDecoration(this.Btn_volvermodulos, BunifuAnimatorNS.DecorationType.None);
+            this.Btn_volvermodulos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Btn_volvermodulos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_volvermodulos.Image")));
+            this.Btn_volvermodulos.Location = new System.Drawing.Point(0, 0);
+            this.Btn_volvermodulos.Name = "Btn_volvermodulos";
+            this.Btn_volvermodulos.Size = new System.Drawing.Size(26, 23);
+            this.Btn_volvermodulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_volvermodulos.TabIndex = 3;
+            this.Btn_volvermodulos.TabStop = false;
+            this.Btn_volvermodulos.Visible = false;
+            this.Btn_volvermodulos.Click += new System.EventHandler(this.Btn_volveropciones_Click);
             // 
             // botonSub
             // 
             this.PanelAnimator.SetDecoration(this.botonSub, BunifuAnimatorNS.DecorationType.None);
-            this.botonSub.Location = new System.Drawing.Point(92, 279);
+            this.botonSub.Location = new System.Drawing.Point(6, 238);
             this.botonSub.Name = "botonSub";
-            this.botonSub.Size = new System.Drawing.Size(10, 10);
+            this.botonSub.Size = new System.Drawing.Size(177, 48);
             this.botonSub.TabIndex = 1;
-            this.botonSub.Text = "prueba";
+            this.botonSub.Text = "Seleccion de opcion";
             this.botonSub.UseVisualStyleBackColor = true;
             this.botonSub.Visible = false;
             this.botonSub.Click += new System.EventHandler(this.BotonSub_Click);
@@ -227,49 +216,14 @@ namespace fabio
             // boton
             // 
             this.PanelAnimator.SetDecoration(this.boton, BunifuAnimatorNS.DecorationType.None);
-            this.boton.Location = new System.Drawing.Point(212, 279);
+            this.boton.Location = new System.Drawing.Point(27, 238);
             this.boton.Name = "boton";
-            this.boton.Size = new System.Drawing.Size(10, 10);
+            this.boton.Size = new System.Drawing.Size(155, 48);
             this.boton.TabIndex = 0;
-            this.boton.Text = "prueba";
+            this.boton.Text = "seleccion de modulo";
             this.boton.UseVisualStyleBackColor = true;
             this.boton.Visible = false;
-            this.boton.Click += new System.EventHandler(this.Boton_Click_1);
-            // 
-            // pnl_submodulos
-            // 
-            this.pnl_submodulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(55)))));
-            this.PanelAnimator.SetDecoration(this.pnl_submodulos, BunifuAnimatorNS.DecorationType.None);
-            this.pnl_submodulos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_submodulos.Location = new System.Drawing.Point(279, 88);
-            this.pnl_submodulos.Name = "pnl_submodulos";
-            this.pnl_submodulos.Size = new System.Drawing.Size(10, 531);
-            this.pnl_submodulos.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_volver);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 88);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
-            // 
-            // btn_volver
-            // 
-            this.PanelAnimator.SetDecoration(this.btn_volver, BunifuAnimatorNS.DecorationType.None);
-            this.btn_volver.Image = ((System.Drawing.Image)(resources.GetObject("btn_volver.Image")));
-            this.btn_volver.Location = new System.Drawing.Point(241, 54);
-            this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(39, 27);
-            this.btn_volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_volver.TabIndex = 1;
-            this.btn_volver.TabStop = false;
-            this.btn_volver.Click += new System.EventHandler(this.Btn_volver_Click);
+            this.boton.Click += new System.EventHandler(this.Boton_Click);
             // 
             // pictureBox5
             // 
@@ -278,7 +232,7 @@ namespace fabio
             this.pictureBox5.Location = new System.Drawing.Point(12, 8);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(223, 76);
+            this.pictureBox5.Size = new System.Drawing.Size(149, 56);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -292,7 +246,7 @@ namespace fabio
             // 
             // PanelAnimator
             // 
-            this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.PanelAnimator.Cursor = null;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -301,68 +255,109 @@ namespace fabio
             animation1.MinTime = 0F;
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
             animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
+            animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.PanelAnimator.DefaultAnimation = animation1;
-            this.PanelAnimator.TimeStep = 0.1F;
+            // 
+            // lbl_texto
+            // 
+            this.lbl_texto.AutoSize = true;
+            this.PanelAnimator.SetDecoration(this.lbl_texto, BunifuAnimatorNS.DecorationType.None);
+            this.lbl_texto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_texto.ForeColor = System.Drawing.Color.Silver;
+            this.lbl_texto.Location = new System.Drawing.Point(58, 2);
+            this.lbl_texto.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.lbl_texto.Name = "lbl_texto";
+            this.lbl_texto.Size = new System.Drawing.Size(62, 17);
+            this.lbl_texto.TabIndex = 4;
+            this.lbl_texto.Text = "Modulos";
+            this.lbl_texto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cabezera
+            // 
+            this.cabezera.Controls.Add(this.Pnl_subsubmdoulos);
+            this.cabezera.Controls.Add(this.pnl_submodulos);
+            this.cabezera.Controls.Add(this.Panel_botones);
+            this.cabezera.Controls.Add(this.panel2);
+            this.cabezera.Controls.Add(this.logo);
+            this.PanelAnimator.SetDecoration(this.cabezera, BunifuAnimatorNS.DecorationType.None);
+            this.cabezera.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cabezera.Location = new System.Drawing.Point(0, 0);
+            this.cabezera.Name = "cabezera";
+            this.cabezera.Size = new System.Drawing.Size(616, 619);
+            this.cabezera.TabIndex = 0;
+            // 
+            // logo
+            // 
+            this.logo.Controls.Add(this.pictureBox5);
+            this.PanelAnimator.SetDecoration(this.logo, BunifuAnimatorNS.DecorationType.None);
+            this.logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(616, 68);
+            this.logo.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Btn_volveropciones);
+            this.panel2.Controls.Add(this.Btn_volvermodulos);
+            this.panel2.Controls.Add(this.lbl_texto);
+            this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(616, 23);
+            this.panel2.TabIndex = 1;
+            // 
+            // Panel_botones
+            // 
+            this.Panel_botones.Controls.Add(this.boton);
+            this.PanelAnimator.SetDecoration(this.Panel_botones, BunifuAnimatorNS.DecorationType.None);
+            this.Panel_botones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel_botones.Location = new System.Drawing.Point(0, 91);
+            this.Panel_botones.Name = "Panel_botones";
+            this.Panel_botones.Size = new System.Drawing.Size(200, 528);
+            this.Panel_botones.TabIndex = 2;
+            // 
+            // pnl_submodulos
+            // 
+            this.pnl_submodulos.Controls.Add(this.botonSub);
+            this.PanelAnimator.SetDecoration(this.pnl_submodulos, BunifuAnimatorNS.DecorationType.None);
+            this.pnl_submodulos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_submodulos.Location = new System.Drawing.Point(200, 91);
+            this.pnl_submodulos.Name = "pnl_submodulos";
+            this.pnl_submodulos.Size = new System.Drawing.Size(200, 528);
+            this.pnl_submodulos.TabIndex = 3;
             // 
             // Pnl_subsubmdoulos
             // 
-            this.Pnl_subsubmdoulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Pnl_subsubmdoulos.Controls.Add(this.panel3);
+            this.Pnl_subsubmdoulos.Controls.Add(this.botonSub3);
             this.PanelAnimator.SetDecoration(this.Pnl_subsubmdoulos, BunifuAnimatorNS.DecorationType.None);
             this.Pnl_subsubmdoulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_subsubmdoulos.Location = new System.Drawing.Point(289, 0);
+            this.Pnl_subsubmdoulos.Location = new System.Drawing.Point(400, 91);
             this.Pnl_subsubmdoulos.Name = "Pnl_subsubmdoulos";
-            this.Pnl_subsubmdoulos.Size = new System.Drawing.Size(229, 619);
-            this.Pnl_subsubmdoulos.TabIndex = 2;
+            this.Pnl_subsubmdoulos.Size = new System.Drawing.Size(200, 528);
+            this.Pnl_subsubmdoulos.TabIndex = 4;
             // 
-            // panel3
+            // Btn_volveropciones
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel3.Controls.Add(this.lbl_SubSubmodulo);
-            this.PanelAnimator.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 88);
-            this.panel3.TabIndex = 0;
-            // 
-            // lbl_SubSubmodulo
-            // 
-            this.lbl_SubSubmodulo.AutoSize = true;
-            this.PanelAnimator.SetDecoration(this.lbl_SubSubmodulo, BunifuAnimatorNS.DecorationType.None);
-            this.lbl_SubSubmodulo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SubSubmodulo.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_SubSubmodulo.Location = new System.Drawing.Point(6, 37);
-            this.lbl_SubSubmodulo.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.lbl_SubSubmodulo.Name = "lbl_SubSubmodulo";
-            this.lbl_SubSubmodulo.Size = new System.Drawing.Size(204, 17);
-            this.lbl_SubSubmodulo.TabIndex = 0;
-            this.lbl_SubSubmodulo.Text = "Texto de  boton que se apreto";
-            this.lbl_SubSubmodulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(215)))), ((int)(((byte)(150)))));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelAnimator.SetDecoration(this.bunifuGradientPanel1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(518, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 619);
-            this.bunifuGradientPanel1.TabIndex = 3;
+            this.PanelAnimator.SetDecoration(this.Btn_volveropciones, BunifuAnimatorNS.DecorationType.None);
+            this.Btn_volveropciones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Btn_volveropciones.Image = ((System.Drawing.Image)(resources.GetObject("Btn_volveropciones.Image")));
+            this.Btn_volveropciones.Location = new System.Drawing.Point(26, 0);
+            this.Btn_volveropciones.Name = "Btn_volveropciones";
+            this.Btn_volveropciones.Size = new System.Drawing.Size(26, 23);
+            this.Btn_volveropciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Btn_volveropciones.TabIndex = 5;
+            this.Btn_volveropciones.TabStop = false;
+            this.Btn_volveropciones.Visible = false;
+            this.Btn_volveropciones.Click += new System.EventHandler(this.Btn_volveropciones_Click_1);
             // 
             // ContenedorPrincipal
             // 
@@ -386,14 +381,16 @@ namespace fabio
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.PNL_Modulos.ResumeLayout(false);
-            this.Panel_botones.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_volvermodulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.cabezera.ResumeLayout(false);
+            this.logo.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.Panel_botones.ResumeLayout(false);
+            this.pnl_submodulos.ResumeLayout(false);
             this.Pnl_subsubmdoulos.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Btn_volveropciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,8 +401,6 @@ namespace fabio
         private System.Windows.Forms.Panel PNL_BarraControl;
        
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel PNL_Contenedor;
-        private System.Windows.Forms.Panel PNL_Modulos;
         private BunifuDragControl bunifuDragControl1;
         private BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -413,16 +408,19 @@ namespace fabio
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel Panel_botones;
-        private System.Windows.Forms.Panel pnl_submodulos;
-        private BunifuAnimatorNS.Animator PanelAnimator;
-        private System.Windows.Forms.PictureBox btn_volver;
-        private System.Windows.Forms.Button boton;
+        private System.Windows.Forms.Button botonSub3;
         private System.Windows.Forms.Button botonSub;
+        private System.Windows.Forms.Button boton;
+        private System.Windows.Forms.PictureBox Btn_volvermodulos;
+        public BunifuAnimatorNS.Animator PanelAnimator;
+        public BunifuCustomLabel lbl_texto;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel cabezera;
         private System.Windows.Forms.Panel Pnl_subsubmdoulos;
-        private System.Windows.Forms.Panel panel3;
-        private BunifuGradientPanel bunifuGradientPanel1;
-        public BunifuCustomLabel lbl_SubSubmodulo;
+        private System.Windows.Forms.Panel pnl_submodulos;
+        private System.Windows.Forms.Panel Panel_botones;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel logo;
+        private System.Windows.Forms.PictureBox Btn_volveropciones;
     }
 }

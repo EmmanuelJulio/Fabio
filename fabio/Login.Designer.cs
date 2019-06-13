@@ -264,7 +264,6 @@ namespace fabio
         private System.Windows.Forms.FlowLayoutPanel control;
         private BunifuDragControl bunifuDragControl2;
         private BunifuCustomLabel HORA;
-        private System.Windows.Forms.Timer timerHora;
         private BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.TextBox txtuser;
@@ -273,5 +272,6 @@ namespace fabio
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        public System.Windows.Forms.Timer timerHora;
     }
 }
