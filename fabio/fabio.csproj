@@ -63,17 +63,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bulonera2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuraciones\UserConfig\frm_AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\UserConfig\frm_AddUser.Designer.cs">
+      <DependentUpon>frm_AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContenedorPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ContenedorPrincipal.Designer.cs">
       <DependentUpon>ContenedorPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FABIO\Form1.cs">
+    <Compile Include="Fabio\Productos\frm_dimencional.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FABIO\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Fabio\Productos\frm_dimencional.Designer.cs">
+      <DependentUpon>frm_dimencional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_hilosxpul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_hilosxpul.Designer.cs">
+      <DependentUpon>frm_hilosxpul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_imagenesMarcaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_imagenesMarcaciones.Designer.cs">
+      <DependentUpon>frm_imagenesMarcaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_imagenesProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_imagenesProd.Designer.cs">
+      <DependentUpon>frm_imagenesProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_lineas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\.Designer.cs">
+      <DependentUpon>frm_lineas.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fabio\Productos\frm_productos.Designer.cs">
+      <DependentUpon>frm_productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formshijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formshijos.Designer.cs">
+      <DependentUpon>formshijos.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageBoxPers.cs">
       <SubType>Form</SubType>
@@ -87,50 +135,71 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
+    <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="Models\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="Models\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MODULOS.cs">
+    <Compile Include="Models\MODULOS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="MODULO_USUARIO.cs">
+    <Compile Include="Models\MODULO_USUARIO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_modulospermitidos_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sp_SubMenus_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sp_Submodulos_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUBMENU.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUBMODULOS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USUARIOS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Procedures\sp_Procedures.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SUBMENU.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SUBMODULOS.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="USUARIOS.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Configuraciones\UserConfig\frm_AddUser.resx">
+      <DependentUpon>frm_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContenedorPrincipal.resx">
       <DependentUpon>ContenedorPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fabio\Productos\frm_dimencional.resx">
+      <DependentUpon>frm_dimencional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fabio\Productos\frm_hilosxpul.resx">
+      <DependentUpon>frm_hilosxpul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formshijos.resx">
+      <DependentUpon>formshijos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxPers.resx">
       <DependentUpon>MessageBoxPers.cs</DependentUpon>
@@ -148,11 +217,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
+    <None Include="bulonera2DataSet.xsc">
+      <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bulonera2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bulonera2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bulonera2DataSet.xss">
+      <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -179,16 +259,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuraciones\UserConfig\Agregar\" />
+    <Folder Include="Control de calidad\" />
+    <Folder Include="Resources\MarcImage\" />
+    <Folder Include="Resources\ProdImage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

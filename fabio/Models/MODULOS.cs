@@ -7,28 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabio
+namespace fabio.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class USUARIOS
+    public partial class MODULOS
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public USUARIOS()
+        public MODULOS()
         {
             this.MODULO_USUARIO = new HashSet<MODULO_USUARIO>();
+            this.SUBMODULOS = new HashSet<SUBMODULOS>();
         }
     
-        public int id_usuario { get; set; }
-        public string nombre_usuario { get; set; }
-        public string contraseña { get; set; }
-        public string apellido { get; set; }
-        public string nombre { get; set; }
-        public string sector { get; set; }
-        public string acceso { get; set; }
+        public int ID_MODULO { get; set; }
+        public string NOMBRE_MOD { get; set; }
+        public string COD_MOD { get; set; }
+        public int SECTOR_MOD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MODULO_USUARIO> MODULO_USUARIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUBMODULOS> SUBMODULOS { get; set; }
     }
 }

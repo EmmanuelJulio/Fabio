@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabio
+namespace fabio.Models
 {
     using System;
     using System.Data.Entity;
@@ -15,10 +15,10 @@ namespace fabio
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class EntityBulonera2 : DbContext
+    public partial class bulonera2Entities1 : DbContext
     {
-        public EntityBulonera2()
-            : base("name=EntityBulonera2")
+        public bulonera2Entities1()
+            : base("name=bulonera2Entities1")
         {
         }
     
@@ -115,6 +115,15 @@ namespace fabio
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
         }
     
+        public virtual ObjectResult<sp_modulospermitidos_Result> sp_modulospermitidos(Nullable<int> id_usuario)
+        {
+            var id_usuarioParameter = id_usuario.HasValue ?
+                new ObjectParameter("id_usuario", id_usuario) :
+                new ObjectParameter("id_usuario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_modulospermitidos_Result>("sp_modulospermitidos", id_usuarioParameter);
+        }
+    
         public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
         {
             var diagramnameParameter = diagramname != null ?
@@ -130,6 +139,24 @@ namespace fabio
                 new ObjectParameter("new_diagramname", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual ObjectResult<Sp_SubMenus_Result> Sp_SubMenus(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_SubMenus_Result>("Sp_SubMenus", nombreParameter);
+        }
+    
+        public virtual ObjectResult<Sp_Submodulos_Result> Sp_Submodulos(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Sp_Submodulos_Result>("Sp_Submodulos", nombreParameter);
         }
     
         public virtual int sp_upgraddiagrams()

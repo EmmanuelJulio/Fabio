@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabio
+namespace fabio.Models
 {
     using System;
     using System.Collections.Generic;

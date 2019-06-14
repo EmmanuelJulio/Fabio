@@ -7,16 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabio
+namespace fabio.Models
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_helpdiagrams_Result
+    public partial class SUBMENU
     {
-        public string Database { get; set; }
-        public string Name { get; set; }
-        public int ID { get; set; }
-        public string Owner { get; set; }
-        public int OwnerID { get; set; }
+        public int id_SubMenu { get; set; }
+        public string subMenu_nombre { get; set; }
+        public string subMenu_Sys { get; set; }
+        public int ID_SUBMODULO { get; set; }
+    
+        public virtual SUBMODULOS SUBMODULOS { get; set; }
     }
 }

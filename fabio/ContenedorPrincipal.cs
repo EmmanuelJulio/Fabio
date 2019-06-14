@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,7 +15,12 @@ namespace fabio
 {
     public partial class ContenedorPrincipal : Form
     {
-        public string moduloselecionado;
+        Dictionary<string, Form> Ins = new Dictionary<string, Form>();
+        private const int cGrip = 16;
+        private const int cCaption = 32;
+        
+        public static string moduloselecionado;
+        public static string Opcionmodseleccionada;
         public string opcionseleccionada;
         public string formularioseleccionado;
         public void Deslizar(Panel Aesconeder,Panel Amostrar)
@@ -29,13 +36,35 @@ namespace fabio
             //}
                 PanelAnimator.HideSync(Aesconeder);
                 PanelAnimator.ShowSync(Amostrar);
-            Amostrar.Width = 280;
-                
+                 Amostrar.Width = 280;
+                // SystemSounds.Asterisk.Play();
+
         }
         public ContenedorPrincipal()
         {
+
             InitializeComponent();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
+       // protected override void WndProc(ref Message n)
+        //{
+        //    if (n.Msg == 0x84)
+        //    {
+        //        Point pos = new Point(n.LParam.ToInt32());
+        //        pos = this.PointToClient(pos);
+        //        if(pos.Y < cCaption)
+        //        {
+        //            n.Result = (IntPtr)2;
+        //            return;
+        //        }
+        //        if (pos.X>=this.ClientSize.Width-cGrip && pos.Y >= this.ClientSize.Height -cGrip)
+        //        {
+        //            n.Result = (IntPtr)17;
+        //            return;
+        //        }
+        //    }
+        //    base.WndProc(ref n);
+        //}
         //Cargo todos los botones que tenga permitido el usuario que ingreso los botones se van a llamar depende lo que diga la base de datos 
         //pero en el programa seran buton
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
@@ -46,7 +75,7 @@ namespace fabio
             Pnl_subsubmdoulos.Width = 1;
             string usu = Login.USUARIO;
             int id_usu = Login.ID_usuario;
-            using (EntityBulonera2 db = new EntityBulonera2())
+            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
             {
               var modulos= db.Database.SqlQuery<sp_modulospermitidos>("sp_modulospermitidos @p0",id_usu).ToList();
                 foreach (var Omodulo in modulos)
@@ -64,12 +93,10 @@ namespace fabio
                 }
             }
         }
-
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
@@ -94,93 +121,33 @@ namespace fabio
         {
             WindowState = FormWindowState.Minimized;
         }
-
-       
-
-
         //lo que ocurre cuando precionas un boton de l modulo es preparar los botones que contiene ese modulo en otro panel
         //al apretar uno de estos se crean los botones en el panel Pnl_subsubmdoulos
-
-    
-
-
-    
-
         private void BunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void BotonSub3_Click(object sender, EventArgs e)
-        {
-            Btn_volveropciones.Visible = false;
-            MessageBoxPers.message("hola hola probando",MessageBoxPers.Messagetype.Hecho);
-        }
-
-     
         //lo que oasa cuadno se terminan de crear todas las opcciones
         //ultimo paso de carga de botones
-
-        private void BotonSub_Click(object sender, EventArgs e)
-        {
-            Btn_volvermodulos.Visible = false;
-            Btn_volveropciones.Visible = true;
-           // Deslisarmenu(PNL_Modulos);
-            Pnl_subsubmdoulos.Controls.Clear();
-
-            string nombreSub2 = ((Button)sender).Text;
-            lbl_texto.Text = nombreSub2;
-            opcionseleccionada = nombreSub2;
-           // lbl_SubSubmodulo.Text = nombreSub2;
-            using (EntityBulonera2 db = new EntityBulonera2())
-            {
-                var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
-                foreach (var submoduli in submodulos)
-                {
-                    Button botonSub3 = new Button();
-                    botonSub3.Text = submoduli.subMenu_nombre;
-                    botonSub3.AccessibleName = submoduli.subMenu_Sys;
-                    botonSub3.Dock = DockStyle.Top;
-                    botonSub3.Height = 30;
-                    botonSub3.BackColor = Color.FromArgb(135, 158, 200);
-                    botonSub3.FlatStyle = FlatStyle.Flat;
-                    botonSub3.ForeColor = Color.FromArgb(45, 45, 48);
-                    botonSub3.Click += new EventHandler(BotonSub_Click);
-                    Pnl_subsubmdoulos.Controls.Add(botonSub3);
-
-                }
-            }
-            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
-     
-        }
-
-       
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
-
-      
-
         private void Boton_Click(object sender, EventArgs e)
         {
             pnl_submodulos.Controls.Clear();
-            if (Panel_botones.Width > 4){
+            if (Panel_botones.Width > 4)
+            {
                 Btn_volvermodulos.Visible = true;
             }
-            else{
+            else
+            {
                 Btn_volvermodulos.Visible = false;
             }
-                
-            
+
+
             Btn_volveropciones.Visible = false;
-             string nombreSub = ((Button)sender).Text;
+            string nombreSub = ((Button)sender).Text;
             lbl_texto.Text = nombreSub;
             moduloselecionado = nombreSub;
-            using (EntityBulonera2 db = new EntityBulonera2())
+            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
             {
                 var submodulos = db.Database.SqlQuery<Sp_Submodulos>("Sp_Submodulos @p0", nombreSub).ToList();
                 foreach (var submoduli in submodulos)
@@ -198,8 +165,128 @@ namespace fabio
 
                 }
             }
+
             Deslizar(Panel_botones, pnl_submodulos);
         }
+        private void BotonSub_Click(object sender, EventArgs e)
+        {
+            Btn_volvermodulos.Visible = false;
+            Btn_volveropciones.Visible = true;
+           // Deslisarmenu(PNL_Modulos);
+            Pnl_subsubmdoulos.Controls.Clear();
+
+            string nombreSub2 = ((Button)sender).Text;
+            lbl_texto.Text = nombreSub2;
+            opcionseleccionada = nombreSub2;
+           // lbl_SubSubmodulo.Text = nombreSub2;
+            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            {
+                var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
+                foreach (var submoduli in submodulos)
+                {
+                    Button BotonSub3 = new Button();
+                    BotonSub3.Text = submoduli.subMenu_nombre;
+                    BotonSub3.AccessibleName = submoduli.subMenu_Sys;
+                    BotonSub3.Dock = DockStyle.Top;
+                    BotonSub3.Height = 30;
+                    BotonSub3.BackColor = Color.FromArgb(220, 78, 65);
+                    BotonSub3.FlatStyle = FlatStyle.Flat;
+                    BotonSub3.ForeColor = Color.FromArgb(45, 45, 48);
+                    BotonSub3.Click += new EventHandler(BotonSub3_Click);
+                    Pnl_subsubmdoulos.Controls.Add(BotonSub3);
+
+                }
+            }
+            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
+     
+        }
+        //este boton me va a abrir los forms
+
+        private void BotonSub3_Click(object sender, EventArgs e)
+        {
+
+            string nombreSub3 = ((Button)sender).Text;
+           
+
+            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            {
+                var Subme = from Submenu in db.SUBMENU
+                             where Submenu.subMenu_nombre == nombreSub3
+                             select new
+                             {
+                                 frmnombre = Submenu.subMenu_Sys
+                             };
+                foreach (var sub in Subme)
+                {
+
+                    try
+                    {
+                        string NameSpace = "fabio" + "." + moduloselecionado + "." + opcionseleccionada;
+                        string Nombreform = sub.frmnombre;
+                        while (NameSpace.Contains(" "))
+                        {
+                            NameSpace.Remove(8, 1);
+                        }
+
+                        Assembly asm = Assembly.GetEntryAssembly();
+                        Type formtype = asm.GetType(string.Format("{0}.{1}", NameSpace, Nombreform));
+
+                        Form f = (Form)Activator.CreateInstance(formtype);
+                        
+                        AbrirFormHijo(f);
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBoxPers.message("No se pudo abrir el formulario solicitado", MessageBoxPers.Messagetype.Error);
+                    }
+
+
+                }
+            }
+           
+           
+          
+        }
+       
+        public void AbrirFormHijo(object formhijo)
+        {
+            if (this.contenedor.Controls.Count > 0)
+            {
+                this.contenedor.Controls.RemoveAt(0);
+            }
+            else
+            {
+                Form fh = formhijo as Form;
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.None;
+                this.contenedor.Controls.Add(fh);
+                this.contenedor.Tag = fh;
+                fh.Dock = DockStyle.Fill;
+                fh.Show();
+                
+            }
+        }
+        
+
+        public void OpenForm(String NombreForm,String NameSpace)
+        {
+           
+           
+
+        }
+        
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Login lg = new Login();
+        }
+
+        
+
+      
+
+      
 
         private void Btn_volverModulos_Click(object sender, EventArgs e)
         {
