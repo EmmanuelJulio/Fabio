@@ -12,6 +12,14 @@ namespace fabio
 {
     public partial class Login : Form
     {
+        public static string USUARIO;
+        public static int ID_usuario;
+        public string GetUsuario()
+        {
+            return USUARIO;
+        }
+
+
         public Login()
         {
             InitializeComponent();
@@ -30,9 +38,13 @@ namespace fabio
         private void TimerHora_Tick(object sender, EventArgs e)
         {
             HORA.Text = DateTime.Now.ToLongTimeString();
-            if (this.Opacity !=  100)
+            if (this.Opacity !=  1)
             {
-                this.Opacity =this.Opacity+0.1;
+                this.Opacity =this.Opacity+0.2;
+            }
+            else
+            {
+                HORA.Enabled = false;
             }
 
 
@@ -87,6 +99,69 @@ namespace fabio
                 txtpass.Text = "Contraseña";
                 txtpass.ForeColor = Color.Silver;
                 txtpass.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar.ToString()=="\r")
+            {
+                txtpass.Focus();
+            }
+        }
+
+        private void Txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.ToString() == "\r")
+            {
+                btnlogin.Focus();
+            }
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void Btnlogin_Click(object sender, EventArgs e)
+        {
+            using(Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            {
+                var list = db.USUARIOS;
+                bool usuario=false;
+                while (usuario== false)
+                {
+                    foreach (var Ousuario in list)
+                    {
+                        if(Ousuario.nombre_usuario==txtuser.Text & Ousuario.contraseña == txtpass.Text)
+                        {
+                            ID_usuario = Ousuario.id_usuario;
+                            usuario = true;
+                            USUARIO = Ousuario.nombre_usuario;
+                            MessageBoxPers.message("Acceso Autorizado", MessageBoxPers.Messagetype.Acceso);
+                           
+                            ContenedorPrincipal cp = new ContenedorPrincipal();
+                            cp.Show();
+                            this.Hide();
+                            break;
+
+                        }
+                 
+                       
+                    }
+                    
+                    break;
+                }
+                if (usuario == false)
+                {
+                txtpass.Text = "Contraseña";
+                txtuser.Text = "Usuario";
+                txtpass.UseSystemPasswordChar = false;
+                
+                    MessageBoxPers.message("no se encontro el usuario o la contraceña es incorrecta", MessageBoxPers.Messagetype.Error);
+                    
+                }
             }
         }
     }
