@@ -42,5 +42,16 @@ namespace fabio.Properties {
                 return ((string)(this["bulonera2ConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EMMANUELJULIO\\DESARROLLO;Initial Catalog=bulonera2;Persist Security I" +
+            "nfo=True;User ID=sa;Password=$%Fabio1")]
+        public string bulonera2ConnectionString2 {
+            get {
+                return ((string)(this["bulonera2ConnectionString2"]));
+            }
+        }
     }
 }

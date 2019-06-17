@@ -1,55 +1,13 @@
 ﻿'fabio.exe' (CLR v4.0.30319: DefaultDomain): 'C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: DefaultDomain): 'C:\Users\EmmaLap\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\fabio.exe' cargado. Símbolos cargados.
+'fabio.exe' (CLR v4.0.30319: DefaultDomain): 'C:\Users\emmanueljulio\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\fabio.exe' cargado. Símbolos cargados.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Users\EmmaLap\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\Bunifu_UI_v1.4.dll' cargado. El módulo se compiló sin símbolos.
+'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll' cargado. 
+'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Users\emmanueljulio\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\Bunifu_UI_v1.4.dll' cargado. El módulo se compiló sin símbolos.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\assembly\GAC_MSIL\Microsoft.VisualBasic.PowerPacks\9.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.PowerPacks.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
 'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Users\EmmaLap\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\EntityFramework.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Users\EmmaLap\source\repos\EmmanuelJulio\Fabio\fabio\bin\Debug\EntityFramework.SqlServer.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'Anonymously Hosted DynamicMethods Assembly' cargado. 
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data.OracleClient\v4.0_4.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Data.resources.dll' cargado. El módulo se compiló sin símbolos.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Xml.resources.dll' cargado. El módulo se compiló sin símbolos.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'EntityFrameworkDynamicProxies-fabio' cargado. 
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_es_b77a5c561934e089\mscorlib.resources.dll' cargado. El módulo se compiló sin símbolos.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll' cargado. 
-'fabio.exe' (CLR v4.0.30319: fabio.exe): 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Windows.Forms.resources.dll' cargado. El módulo se compiló sin símbolos.
-Excepción producida: 'System.ArgumentException' en System.Windows.Forms.dll
-Excepción producida: 'System.ArgumentException' en System.Windows.Forms.dll
-El subproceso 0x1dd4 terminó con código 0 (0x0).
-El subproceso 0x15d0 terminó con código 0 (0x0).
-El subproceso 0x3e98 terminó con código 0 (0x0).
-El subproceso 0x3810 terminó con código 0 (0x0).
-El subproceso 0x1f98 terminó con código 0 (0x0).
-El subproceso 0x2984 terminó con código 0 (0x0).
-El subproceso 0x3a00 terminó con código 0 (0x0).
-El subproceso 0x3a18 terminó con código 0 (0x0).
-El subproceso 0x33f4 terminó con código 0 (0x0).
-El subproceso 0x38c0 terminó con código 0 (0x0).
-El subproceso 0x214 terminó con código 0 (0x0).
-El subproceso 0x3b0c terminó con código 0 (0x0).
-El subproceso 0x38fc terminó con código 0 (0x0).
-El subproceso 0x37e8 terminó con código 0 (0x0).
-El subproceso 0x3844 terminó con código 0 (0x0).
-El subproceso 0x380 terminó con código 0 (0x0).
-El subproceso 0x860 terminó con código 0 (0x0).
-El subproceso 0x308c terminó con código 0 (0x0).
-El subproceso 0x74c terminó con código 0 (0x0).
-Excepción producida: 'System.ArgumentException' en System.Windows.Forms.dll
-El subproceso 0x1734 terminó con código 0 (0x0).
-El programa '[172] fabio.exe: Seguimiento de programa' terminó con código 0 (0x0).
-El programa '[172] fabio.exe' terminó con código 0 (0x0).
+El programa '[11252] fabio.exe: Seguimiento de programa' terminó con código 0 (0x0).
+El programa '[11252] fabio.exe' terminó con código -1 (0xffffffff).

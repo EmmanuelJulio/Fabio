@@ -219,6 +219,7 @@ namespace fabio
                 foreach (var sub in Subme)
                 {
 
+
                     try
                     {
                         string NameSpace = "fabio" + "." + moduloselecionado + "." + opcionseleccionada;
@@ -233,14 +234,16 @@ namespace fabio
                         Type formtype = asm.GetType(string.Format("{0}.{1}", NameSpace, Nombreform));
 
                         Form f = (Form)Activator.CreateInstance(formtype);
-                        
+
                         AbrirFormHijo(f);
                     }
                     catch (Exception)
                     {
 
-                        MessageBoxPers.message("No se pudo abrir el formulario solicitado", MessageBoxPers.Messagetype.Error);
+                        throw;
                     }
+                        
+                    
 
 
                 }

@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pnl_Permisos = new System.Windows.Forms.Panel();
-            this.btn_guardarPermisos = new System.Windows.Forms.Button();
-            this.Modulos = new System.Windows.Forms.CheckedListBox();
-            this.mODULOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnl_UserDat = new System.Windows.Forms.Panel();
+            this.combo_seccion = new System.Windows.Forms.ComboBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.txt_pass2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.Txt_Usuario = new System.Windows.Forms.TextBox();
             this.Txt_apellido = new System.Windows.Forms.TextBox();
@@ -47,68 +42,70 @@
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.pnl_Permisos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mODULOSBindingSource)).BeginInit();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pnl_nav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).BeginInit();
             this.pnl_UserDat.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnl_Permisos
+            // pnl_nav
             // 
-            this.pnl_Permisos.Controls.Add(this.btn_guardarPermisos);
-            this.pnl_Permisos.Controls.Add(this.Modulos);
-            this.pnl_Permisos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnl_Permisos.Location = new System.Drawing.Point(388, 26);
-            this.pnl_Permisos.Name = "pnl_Permisos";
-            this.pnl_Permisos.Size = new System.Drawing.Size(494, 600);
-            this.pnl_Permisos.TabIndex = 19;
+            this.pnl_nav.Size = new System.Drawing.Size(882, 22);
             // 
-            // btn_guardarPermisos
+            // bunifuDragControl1
             // 
-            this.btn_guardarPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.btn_guardarPermisos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.btn_guardarPermisos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btn_guardarPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.btn_guardarPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardarPermisos.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_guardarPermisos.Location = new System.Drawing.Point(236, 285);
-            this.btn_guardarPermisos.Name = "btn_guardarPermisos";
-            this.btn_guardarPermisos.Size = new System.Drawing.Size(183, 40);
-            this.btn_guardarPermisos.TabIndex = 21;
-            this.btn_guardarPermisos.Text = "Guardar";
-            this.btn_guardarPermisos.UseVisualStyleBackColor = false;
+            this.bunifuDragControl1.Fixed = true;
             // 
-            // Modulos
+            // btn_MinimizeWindow
             // 
-            this.Modulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.Modulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Modulos.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.mODULOSBindingSource, "NOMBRE_MOD", true));
-            this.Modulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Modulos.ForeColor = System.Drawing.Color.Silver;
-            this.Modulos.FormattingEnabled = true;
-            this.Modulos.Location = new System.Drawing.Point(0, 0);
-            this.Modulos.Name = "Modulos";
-            this.Modulos.Size = new System.Drawing.Size(195, 600);
-            this.Modulos.TabIndex = 0;
+            this.btn_MinimizeWindow.Location = new System.Drawing.Point(798, 0);
+            this.btn_MinimizeWindow.Size = new System.Drawing.Size(21, 22);
             // 
-            // mODULOSBindingSource
+            // btn_MaximiseWindow
             // 
-            this.mODULOSBindingSource.DataMember = "MODULOS";
+            this.btn_MaximiseWindow.Location = new System.Drawing.Point(819, 0);
+            this.btn_MaximiseWindow.Size = new System.Drawing.Size(21, 22);
+            // 
+            // btn_normalWindow
+            // 
+            this.btn_normalWindow.Location = new System.Drawing.Point(840, 0);
+            this.btn_normalWindow.Size = new System.Drawing.Size(21, 22);
+            // 
+            // btn_CloseForm
+            // 
+            this.btn_CloseForm.Location = new System.Drawing.Point(861, 0);
+            this.btn_CloseForm.Size = new System.Drawing.Size(21, 22);
             // 
             // pnl_UserDat
             // 
+            this.pnl_UserDat.Controls.Add(this.combo_seccion);
             this.pnl_UserDat.Controls.Add(this.btnlogin);
             this.pnl_UserDat.Controls.Add(this.txt_pass2);
-            this.pnl_UserDat.Controls.Add(this.comboBox1);
             this.pnl_UserDat.Controls.Add(this.txt_pass);
             this.pnl_UserDat.Controls.Add(this.Txt_Usuario);
             this.pnl_UserDat.Controls.Add(this.Txt_apellido);
             this.pnl_UserDat.Controls.Add(this.txt_Nombre);
             this.pnl_UserDat.Controls.Add(this.shapeContainer1);
-            this.pnl_UserDat.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_UserDat.Location = new System.Drawing.Point(0, 26);
+            this.pnl_UserDat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_UserDat.Location = new System.Drawing.Point(0, 22);
             this.pnl_UserDat.Name = "pnl_UserDat";
-            this.pnl_UserDat.Size = new System.Drawing.Size(342, 600);
+            this.pnl_UserDat.Size = new System.Drawing.Size(882, 541);
             this.pnl_UserDat.TabIndex = 20;
+            // 
+            // combo_seccion
+            // 
+            this.combo_seccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.combo_seccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_seccion.ForeColor = System.Drawing.Color.Silver;
+            this.combo_seccion.FormattingEnabled = true;
+            this.combo_seccion.Location = new System.Drawing.Point(305, 256);
+            this.combo_seccion.Name = "combo_seccion";
+            this.combo_seccion.Size = new System.Drawing.Size(283, 28);
+            this.combo_seccion.TabIndex = 27;
+            this.combo_seccion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
             // 
             // btnlogin
             // 
@@ -118,94 +115,98 @@
             this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnlogin.Location = new System.Drawing.Point(68, 285);
+            this.btnlogin.Location = new System.Drawing.Point(367, 299);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(173, 40);
+            this.btnlogin.Size = new System.Drawing.Size(173, 36);
             this.btnlogin.TabIndex = 25;
             this.btnlogin.Text = "Guardar";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
             // 
             // txt_pass2
             // 
             this.txt_pass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.txt_pass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_pass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass2.ForeColor = System.Drawing.Color.Silver;
-            this.txt_pass2.Location = new System.Drawing.Point(16, 187);
-            this.txt_pass2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_pass2.Location = new System.Drawing.Point(306, 215);
+            this.txt_pass2.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass2.Name = "txt_pass2";
-            this.txt_pass2.Size = new System.Drawing.Size(290, 20);
-            this.txt_pass2.TabIndex = 24;
+            this.txt_pass2.Size = new System.Drawing.Size(290, 19);
+            this.txt_pass2.TabIndex = 23;
             this.txt_pass2.Text = "Repetir contraceña";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.comboBox1.DisplayMember = "nombre_usuario";
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 231);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(293, 28);
-            this.comboBox1.TabIndex = 23;
-            this.comboBox1.Text = "Sector";
-            this.comboBox1.ValueMember = "nombre_usuario";
+            this.txt_pass2.Click += new System.EventHandler(this.Txt_Nombre_Click);
+            this.txt_pass2.Enter += new System.EventHandler(this.Txt_Nombre_Enter);
+            this.txt_pass2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_NombreUs_KeyDown);
+            this.txt_pass2.Leave += new System.EventHandler(this.Txt_Nombre_Leave);
             // 
             // txt_pass
             // 
             this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_pass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pass.ForeColor = System.Drawing.Color.Silver;
-            this.txt_pass.Location = new System.Drawing.Point(13, 146);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_pass.Location = new System.Drawing.Point(307, 179);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(290, 20);
+            this.txt_pass.Size = new System.Drawing.Size(290, 19);
             this.txt_pass.TabIndex = 22;
             this.txt_pass.Text = "Contraseña";
+            this.txt_pass.Click += new System.EventHandler(this.Txt_Nombre_Click);
+            this.txt_pass.Enter += new System.EventHandler(this.Txt_Nombre_Enter);
+            this.txt_pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_NombreUs_KeyDown);
+            this.txt_pass.Leave += new System.EventHandler(this.Txt_Nombre_Leave);
             // 
             // Txt_Usuario
             // 
             this.Txt_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.Txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_Usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_Usuario.ForeColor = System.Drawing.Color.Silver;
-            this.Txt_Usuario.Location = new System.Drawing.Point(13, 106);
-            this.Txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Txt_Usuario.Location = new System.Drawing.Point(308, 142);
+            this.Txt_Usuario.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Usuario.Name = "Txt_Usuario";
-            this.Txt_Usuario.Size = new System.Drawing.Size(290, 20);
+            this.Txt_Usuario.Size = new System.Drawing.Size(290, 19);
             this.Txt_Usuario.TabIndex = 21;
             this.Txt_Usuario.Text = "Nombre de usuario ";
+            this.Txt_Usuario.Click += new System.EventHandler(this.Txt_Nombre_Click);
+            this.Txt_Usuario.Enter += new System.EventHandler(this.Txt_Nombre_Enter);
+            this.Txt_Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_NombreUs_KeyDown);
+            this.Txt_Usuario.Leave += new System.EventHandler(this.Txt_Nombre_Leave);
             // 
             // Txt_apellido
             // 
             this.Txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.Txt_apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_apellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_apellido.ForeColor = System.Drawing.Color.Silver;
-            this.Txt_apellido.Location = new System.Drawing.Point(13, 67);
-            this.Txt_apellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Txt_apellido.Location = new System.Drawing.Point(307, 105);
+            this.Txt_apellido.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_apellido.Name = "Txt_apellido";
-            this.Txt_apellido.Size = new System.Drawing.Size(290, 20);
+            this.Txt_apellido.Size = new System.Drawing.Size(290, 19);
             this.Txt_apellido.TabIndex = 20;
             this.Txt_apellido.Text = "Apellido";
+            this.Txt_apellido.Click += new System.EventHandler(this.Txt_Nombre_Click);
+            this.Txt_apellido.Enter += new System.EventHandler(this.Txt_Nombre_Enter);
+            this.Txt_apellido.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
+            this.Txt_apellido.Leave += new System.EventHandler(this.Txt_Nombre_Leave);
             // 
             // txt_Nombre
             // 
             this.txt_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nombre.ForeColor = System.Drawing.Color.Silver;
-            this.txt_Nombre.Location = new System.Drawing.Point(13, 27);
-            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Nombre.Location = new System.Drawing.Point(308, 68);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(290, 20);
+            this.txt_Nombre.Size = new System.Drawing.Size(290, 19);
             this.txt_Nombre.TabIndex = 19;
             this.txt_Nombre.Text = "Nombre";
+            this.txt_Nombre.Click += new System.EventHandler(this.Txt_Nombre_Click);
+            this.txt_Nombre.Enter += new System.EventHandler(this.Txt_Nombre_Enter);
+            this.txt_Nombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
+            this.txt_Nombre.Leave += new System.EventHandler(this.Txt_Nombre_Leave);
             // 
             // shapeContainer1
             // 
@@ -218,7 +219,7 @@
             this.lineShape3,
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(342, 600);
+            this.shapeContainer1.Size = new System.Drawing.Size(882, 541);
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
@@ -229,10 +230,10 @@
             this.lineShape5.Name = "lineShape5";
             this.lineShape5.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.lineShape5.Tag = "0; 150; 240";
-            this.lineShape5.X1 = 6;
-            this.lineShape5.X2 = 288;
-            this.lineShape5.Y1 = 213;
-            this.lineShape5.Y2 = 213;
+            this.lineShape5.X1 = 301;
+            this.lineShape5.X2 = 583;
+            this.lineShape5.Y1 = 237;
+            this.lineShape5.Y2 = 237;
             // 
             // lineShape4
             // 
@@ -241,10 +242,10 @@
             this.lineShape4.Name = "lineShape4";
             this.lineShape4.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.lineShape4.Tag = "0; 150; 240";
-            this.lineShape4.X1 = 8;
-            this.lineShape4.X2 = 290;
-            this.lineShape4.Y1 = 171;
-            this.lineShape4.Y2 = 171;
+            this.lineShape4.X1 = 301;
+            this.lineShape4.X2 = 583;
+            this.lineShape4.Y1 = 200;
+            this.lineShape4.Y2 = 200;
             // 
             // lineShape3
             // 
@@ -253,10 +254,10 @@
             this.lineShape3.Name = "lineShape3";
             this.lineShape3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.lineShape3.Tag = "0; 150; 240";
-            this.lineShape3.X1 = 7;
-            this.lineShape3.X2 = 289;
-            this.lineShape3.Y1 = 134;
-            this.lineShape3.Y2 = 134;
+            this.lineShape3.X1 = 301;
+            this.lineShape3.X2 = 583;
+            this.lineShape3.Y1 = 163;
+            this.lineShape3.Y2 = 163;
             // 
             // lineShape2
             // 
@@ -265,10 +266,10 @@
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.lineShape2.Tag = "0; 150; 240";
-            this.lineShape2.X1 = 7;
-            this.lineShape2.X2 = 289;
-            this.lineShape2.Y1 = 95;
-            this.lineShape2.Y2 = 95;
+            this.lineShape2.X1 = 301;
+            this.lineShape2.X2 = 583;
+            this.lineShape2.Y1 = 126;
+            this.lineShape2.Y2 = 126;
             // 
             // lineShape1
             // 
@@ -277,25 +278,41 @@
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.lineShape1.Tag = "0; 150; 240";
-            this.lineShape1.X1 = 8;
-            this.lineShape1.X2 = 290;
-            this.lineShape1.Y1 = 57;
-            this.lineShape1.Y2 = 57;
+            this.lineShape1.X1 = 301;
+            this.lineShape1.X2 = 583;
+            this.lineShape1.Y1 = 89;
+            this.lineShape1.Y2 = 89;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 2);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(115, 18);
+            this.bunifuCustomLabel1.TabIndex = 21;
+            this.bunifuCustomLabel1.Text = "Agregar Usuario";
             // 
             // frm_AddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 626);
+            this.ClientSize = new System.Drawing.Size(882, 563);
             this.Controls.Add(this.pnl_UserDat);
-            this.Controls.Add(this.pnl_Permisos);
-            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.ForeColor = System.Drawing.Color.Silver;
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "frm_AddUser";
             this.Text = "frm_AddUser";
-            this.Controls.SetChildIndex(this.pnl_Permisos, 0);
+            this.Load += new System.EventHandler(this.Frm_AddUser_Load);
+            this.Controls.SetChildIndex(this.pnl_nav, 0);
             this.Controls.SetChildIndex(this.pnl_UserDat, 0);
-            this.pnl_Permisos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mODULOSBindingSource)).EndInit();
+            this.pnl_nav.ResumeLayout(false);
+            this.pnl_nav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).EndInit();
             this.pnl_UserDat.ResumeLayout(false);
             this.pnl_UserDat.PerformLayout();
             this.ResumeLayout(false);
@@ -303,16 +320,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnl_Permisos;
-        private System.Windows.Forms.Button btn_guardarPermisos;
-        private System.Windows.Forms.CheckedListBox Modulos;
         
-        private System.Windows.Forms.BindingSource mODULOSBindingSource;
+      //  private System.Windows.Forms.BindingSource mODULOSBindingSource;
         
         private System.Windows.Forms.Panel pnl_UserDat;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.TextBox txt_pass2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox Txt_Usuario;
         private System.Windows.Forms.TextBox Txt_apellido;
@@ -323,5 +336,7 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.ComboBox combo_seccion;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
