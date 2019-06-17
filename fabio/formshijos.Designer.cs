@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formshijos));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_nav = new System.Windows.Forms.Panel();
+            this.btn_desacoplar = new System.Windows.Forms.Button();
             this.lbl_modulo = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_MinimizeWindow = new System.Windows.Forms.PictureBox();
             this.btn_MaximiseWindow = new System.Windows.Forms.PictureBox();
@@ -52,15 +53,26 @@
             // 
             // pnl_nav
             // 
-            resources.ApplyResources(this.pnl_nav, "pnl_nav");
             this.pnl_nav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.pnl_nav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(112)))), ((int)(((byte)(183)))));
+            this.pnl_nav.Controls.Add(this.btn_desacoplar);
             this.pnl_nav.Controls.Add(this.lbl_modulo);
             this.pnl_nav.Controls.Add(this.btn_MinimizeWindow);
             this.pnl_nav.Controls.Add(this.btn_MaximiseWindow);
             this.pnl_nav.Controls.Add(this.btn_normalWindow);
             this.pnl_nav.Controls.Add(this.btn_CloseForm);
+            resources.ApplyResources(this.pnl_nav, "pnl_nav");
             this.pnl_nav.Name = "pnl_nav";
+            // 
+            // btn_desacoplar
+            // 
+            this.btn_desacoplar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.btn_desacoplar, "btn_desacoplar");
+            this.btn_desacoplar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_desacoplar.ForeColor = System.Drawing.Color.Silver;
+            this.btn_desacoplar.Name = "btn_desacoplar";
+            this.btn_desacoplar.UseVisualStyleBackColor = true;
+            this.btn_desacoplar.Click += new System.EventHandler(this.Btn_desacoplar_Click);
             // 
             // lbl_modulo
             // 
@@ -131,5 +143,6 @@
         public System.Windows.Forms.PictureBox btn_normalWindow;
         public System.Windows.Forms.PictureBox btn_CloseForm;
         public System.Windows.Forms.Panel pnl_nav;
+        private System.Windows.Forms.Button btn_desacoplar;
     }
 }

@@ -104,7 +104,7 @@ namespace fabio.Configuraciones.Modulos
                                 txt_codmod.Text="";
                                 txt_Nombre.Text = "";
                                 MessageBoxPers.message("Se cargo el modulo", MessageBoxPers.Messagetype.Hecho);
-
+                                dbtransaction.Commit();
                             }
                             catch (Exception)
                             {
@@ -114,6 +114,15 @@ namespace fabio.Configuraciones.Modulos
                         }
                     }
                 }
+            }
+        }
+
+        private void Txt_Nombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+                ((TextBox)sender).Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(((TextBox)sender).Text);
             }
         }
     }

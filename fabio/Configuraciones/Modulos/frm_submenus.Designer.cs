@@ -38,7 +38,15 @@
             this.btn_nuevoSub = new System.Windows.Forms.Button();
             this.btn_nmodulo = new System.Windows.Forms.Button();
             this.pnl_modulos = new System.Windows.Forms.Panel();
+            this.txt_codmod = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_agregarmod = new System.Windows.Forms.Button();
+            this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnl_forms = new System.Windows.Forms.Panel();
             this.lbl_texto = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnl_submod = new System.Windows.Forms.Panel();
@@ -47,14 +55,6 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panelanimator = new BunifuAnimatorNS.Animator(this.components);
-            this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.btn_agregarmod = new System.Windows.Forms.Button();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txt_codmod = new System.Windows.Forms.TextBox();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
@@ -66,6 +66,10 @@
             this.pnl_forms.SuspendLayout();
             this.pnl_submod.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
             // 
             // btn_MinimizeWindow
             // 
@@ -119,9 +123,9 @@
             // panelopcion
             // 
             this.panelopcion.Controls.Add(this.botones);
+            this.panelopcion.Controls.Add(this.pnl_submod);
             this.panelopcion.Controls.Add(this.pnl_modulos);
             this.panelopcion.Controls.Add(this.pnl_forms);
-            this.panelopcion.Controls.Add(this.pnl_submod);
             this.panelanimator.SetDecoration(this.panelopcion, BunifuAnimatorNS.DecorationType.None);
             this.panelopcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelopcion.Location = new System.Drawing.Point(0, 0);
@@ -210,6 +214,80 @@
             this.pnl_modulos.TabIndex = 24;
             this.pnl_modulos.Visible = false;
             // 
+            // txt_codmod
+            // 
+            this.txt_codmod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.txt_codmod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.panelanimator.SetDecoration(this.txt_codmod, BunifuAnimatorNS.DecorationType.None);
+            this.txt_codmod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codmod.ForeColor = System.Drawing.Color.Silver;
+            this.txt_codmod.Location = new System.Drawing.Point(350, 177);
+            this.txt_codmod.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_codmod.Name = "txt_codmod";
+            this.txt_codmod.Size = new System.Drawing.Size(290, 20);
+            this.txt_codmod.TabIndex = 22;
+            this.txt_codmod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.panelanimator.SetDecoration(this.bunifuCustomLabel4, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Silver;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(120, 178);
+            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(218, 21);
+            this.bunifuCustomLabel4.TabIndex = 29;
+            this.bunifuCustomLabel4.Text = "Nombre del nuevo modulo";
+            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.panelanimator.SetDecoration(this.bunifuCustomLabel5, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Silver;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(120, 136);
+            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(218, 21);
+            this.bunifuCustomLabel5.TabIndex = 28;
+            this.bunifuCustomLabel5.Text = "Nombre del nuevo modulo";
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCustomLabel5.Click += new System.EventHandler(this.BunifuCustomLabel5_Click);
+            // 
+            // btn_agregarmod
+            // 
+            this.btn_agregarmod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.panelanimator.SetDecoration(this.btn_agregarmod, BunifuAnimatorNS.DecorationType.None);
+            this.btn_agregarmod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btn_agregarmod.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btn_agregarmod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.btn_agregarmod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregarmod.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_agregarmod.Location = new System.Drawing.Point(256, 229);
+            this.btn_agregarmod.Name = "btn_agregarmod";
+            this.btn_agregarmod.Size = new System.Drawing.Size(173, 40);
+            this.btn_agregarmod.TabIndex = 23;
+            this.btn_agregarmod.Text = "Guardar";
+            this.btn_agregarmod.UseVisualStyleBackColor = false;
+            this.btn_agregarmod.Click += new System.EventHandler(this.Btn_agregarmod_Click);
+            // 
+            // txt_Nombre
+            // 
+            this.txt_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.panelanimator.SetDecoration(this.txt_Nombre, BunifuAnimatorNS.DecorationType.None);
+            this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre.ForeColor = System.Drawing.Color.Silver;
+            this.txt_Nombre.Location = new System.Drawing.Point(349, 134);
+            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Nombre.Name = "txt_Nombre";
+            this.txt_Nombre.Size = new System.Drawing.Size(290, 20);
+            this.txt_Nombre.TabIndex = 21;
+            this.txt_Nombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
+            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
@@ -223,6 +301,43 @@
             this.bunifuCustomLabel3.TabIndex = 5;
             this.bunifuCustomLabel3.Text = "pnl_modulos";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // shapeContainer2
+            // 
+            this.panelanimator.SetDecoration(this.shapeContainer2, BunifuAnimatorNS.DecorationType.None);
+            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer2.Name = "shapeContainer2";
+            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape3,
+            this.lineShape5});
+            this.shapeContainer2.Size = new System.Drawing.Size(1200, 692);
+            this.shapeContainer2.TabIndex = 26;
+            this.shapeContainer2.TabStop = false;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape3.Enabled = false;
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape3.Tag = "0; 150; 240";
+            this.lineShape3.X1 = 351;
+            this.lineShape3.X2 = 633;
+            this.lineShape3.Y1 = 158;
+            this.lineShape3.Y2 = 158;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape5.Enabled = false;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
+            this.lineShape5.Tag = "0; 150; 240";
+            this.lineShape5.X1 = 349;
+            this.lineShape5.X2 = 631;
+            this.lineShape5.Y1 = 199;
+            this.lineShape5.Y2 = 199;
             // 
             // pnl_forms
             // 
@@ -333,115 +448,6 @@
             animation2.TimeCoeff = 0F;
             animation2.TransparencyCoeff = 0F;
             this.panelanimator.DefaultAnimation = animation2;
-            // 
-            // txt_Nombre
-            // 
-            this.txt_Nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.txt_Nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.panelanimator.SetDecoration(this.txt_Nombre, BunifuAnimatorNS.DecorationType.None);
-            this.txt_Nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Nombre.ForeColor = System.Drawing.Color.Silver;
-            this.txt_Nombre.Location = new System.Drawing.Point(349, 134);
-            this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(290, 20);
-            this.txt_Nombre.TabIndex = 21;
-            // 
-            // btn_agregarmod
-            // 
-            this.btn_agregarmod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.panelanimator.SetDecoration(this.btn_agregarmod, BunifuAnimatorNS.DecorationType.None);
-            this.btn_agregarmod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.btn_agregarmod.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btn_agregarmod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.btn_agregarmod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregarmod.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_agregarmod.Location = new System.Drawing.Point(256, 229);
-            this.btn_agregarmod.Name = "btn_agregarmod";
-            this.btn_agregarmod.Size = new System.Drawing.Size(173, 40);
-            this.btn_agregarmod.TabIndex = 25;
-            this.btn_agregarmod.Text = "Guardar";
-            this.btn_agregarmod.UseVisualStyleBackColor = false;
-            this.btn_agregarmod.Click += new System.EventHandler(this.Btn_agregarmod_Click);
-            // 
-            // shapeContainer2
-            // 
-            this.panelanimator.SetDecoration(this.shapeContainer2, BunifuAnimatorNS.DecorationType.None);
-            this.shapeContainer2.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape3,
-            this.lineShape5});
-            this.shapeContainer2.Size = new System.Drawing.Size(1200, 692);
-            this.shapeContainer2.TabIndex = 26;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.panelanimator.SetDecoration(this.bunifuCustomLabel5, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(120, 136);
-            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(218, 21);
-            this.bunifuCustomLabel5.TabIndex = 28;
-            this.bunifuCustomLabel5.Text = "Nombre del nuevo modulo";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuCustomLabel5.Click += new System.EventHandler(this.BunifuCustomLabel5_Click);
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.panelanimator.SetDecoration(this.bunifuCustomLabel4, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(120, 178);
-            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(218, 21);
-            this.bunifuCustomLabel4.TabIndex = 29;
-            this.bunifuCustomLabel4.Text = "Nombre del nuevo modulo";
-            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_codmod
-            // 
-            this.txt_codmod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.txt_codmod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.panelanimator.SetDecoration(this.txt_codmod, BunifuAnimatorNS.DecorationType.None);
-            this.txt_codmod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codmod.ForeColor = System.Drawing.Color.Silver;
-            this.txt_codmod.Location = new System.Drawing.Point(350, 177);
-            this.txt_codmod.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_codmod.Name = "txt_codmod";
-            this.txt_codmod.Size = new System.Drawing.Size(290, 20);
-            this.txt_codmod.TabIndex = 30;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape5.Enabled = false;
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape5.Tag = "0; 150; 240";
-            this.lineShape5.X1 = 349;
-            this.lineShape5.X2 = 631;
-            this.lineShape5.Y1 = 199;
-            this.lineShape5.Y2 = 199;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape3.Enabled = false;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
-            this.lineShape3.Tag = "0; 150; 240";
-            this.lineShape3.X1 = 351;
-            this.lineShape3.X2 = 633;
-            this.lineShape3.Y1 = 158;
-            this.lineShape3.Y2 = 158;
             // 
             // frm_submenus
             // 

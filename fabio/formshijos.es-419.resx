@@ -122,7 +122,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 623</value>
+    <value>1157, 584</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_modulo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -154,6 +154,9 @@
   <data name="btn_MinimizeWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="btn_MinimizeWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1073, 0</value>
+  </data>
   <data name="btn_MinimizeWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -175,6 +178,9 @@
   </data>
   <data name="btn_MaximiseWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btn_MaximiseWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1094, 0</value>
   </data>
   <data name="btn_MaximiseWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -204,6 +210,9 @@
   <data name="btn_normalWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="btn_normalWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1115, 0</value>
+  </data>
   <data name="btn_normalWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -231,6 +240,9 @@
   <data name="btn_CloseForm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="btn_CloseForm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1136, 0</value>
+  </data>
   <data name="btn_CloseForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
@@ -241,7 +253,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="pnl_nav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 23</value>
+    <value>1157, 23</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

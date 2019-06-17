@@ -363,7 +363,7 @@ namespace fabio
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -435,6 +435,6 @@ namespace fabio
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel logo;
         private System.Windows.Forms.PictureBox Btn_volveropciones;
-        private System.Windows.Forms.Panel contenedor;
+        public System.Windows.Forms.Panel contenedor;
     }
 }
