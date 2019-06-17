@@ -183,9 +183,9 @@ namespace fabio
             this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.PanelAnimator.SetDecoration(this.contenedor, BunifuAnimatorNS.DecorationType.None);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(640, 0);
+            this.contenedor.Location = new System.Drawing.Point(201, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(443, 626);
+            this.contenedor.Size = new System.Drawing.Size(882, 626);
             this.contenedor.TabIndex = 1;
             // 
             // cabezera
@@ -199,7 +199,7 @@ namespace fabio
             this.cabezera.Dock = System.Windows.Forms.DockStyle.Left;
             this.cabezera.Location = new System.Drawing.Point(0, 0);
             this.cabezera.Name = "cabezera";
-            this.cabezera.Size = new System.Drawing.Size(640, 626);
+            this.cabezera.Size = new System.Drawing.Size(201, 626);
             this.cabezera.TabIndex = 0;
             // 
             // Pnl_subsubmdoulos
@@ -277,7 +277,7 @@ namespace fabio
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(640, 23);
+            this.panel2.Size = new System.Drawing.Size(201, 23);
             this.panel2.TabIndex = 1;
             // 
             // Btn_volveropciones
@@ -329,7 +329,7 @@ namespace fabio
             this.logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.logo.Location = new System.Drawing.Point(0, 0);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(640, 68);
+            this.logo.Size = new System.Drawing.Size(201, 68);
             this.logo.TabIndex = 0;
             // 
             // pictureBox5

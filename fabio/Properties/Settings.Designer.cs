@@ -32,5 +32,15 @@ namespace fabio.Properties {
                 return ((string)(this["bulonera2ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EMMALAP\\SA;Initial Catalog=bulonera2;Integrated Security=True")]
+        public string bulonera2ConnectionString1 {
+            get {
+                return ((string)(this["bulonera2ConnectionString1"]));
+            }
+        }
     }
 }

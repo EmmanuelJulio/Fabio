@@ -12,13 +12,12 @@ namespace fabio.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class MODULO_USUARIO
+    public partial class DICCIONARIO_FAB
     {
-        public int ID_PERMISO { get; set; }
-        public int ID_USUARIO { get; set; }
-        public int ID_MODULO { get; set; }
-    
-        public virtual MODULOS MODULOS { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
+        public int id { get; set; }
+        public int dic_cab { get; set; }
+        public int dic_cod { get; set; }
+        public string dic_des { get; set; }
+        public string dic_abr { get; set; }
     }
 }

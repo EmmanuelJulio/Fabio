@@ -7,18 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace fabio.Models
+namespace fabio
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class MODULO_USUARIO
+    public partial class Sp_Submodulos_Result
     {
-        public int ID_PERMISO { get; set; }
-        public int ID_USUARIO { get; set; }
-        public int ID_MODULO { get; set; }
-    
-        public virtual MODULOS MODULOS { get; set; }
-        public virtual USUARIOS USUARIOS { get; set; }
+        public string NOMBRE_SUBMOD { get; set; }
+        public string SYS_NOM { get; set; }
     }
 }

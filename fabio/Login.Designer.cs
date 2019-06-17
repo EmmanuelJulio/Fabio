@@ -51,10 +51,14 @@ namespace fabio
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.ErrUsu = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrPss = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrUsu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPss)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -127,6 +131,7 @@ namespace fabio
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.pictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.PictureBox1_DragEnter);
             // 
             // bunifuDragControl2
             // 
@@ -222,6 +227,16 @@ namespace fabio
             this.lineShape1.Y1 = 90;
             this.lineShape1.Y2 = 90;
             // 
+            // ErrUsu
+            // 
+            this.ErrUsu.ContainerControl = this;
+            this.ErrUsu.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrUsu.Icon")));
+            // 
+            // ErrPss
+            // 
+            this.ErrPss.ContainerControl = this;
+            this.ErrPss.Icon = ((System.Drawing.Icon)(resources.GetObject("ErrPss.Icon")));
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -251,6 +266,8 @@ namespace fabio
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrUsu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPss)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +290,7 @@ namespace fabio
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         public System.Windows.Forms.Timer timerHora;
+        private System.Windows.Forms.ErrorProvider ErrUsu;
+        private System.Windows.Forms.ErrorProvider ErrPss;
     }
 }

@@ -17,11 +17,8 @@ namespace fabio.Configuraciones.UserConfig
             InitializeComponent();
         }
 
-        private void Frm_AddUser_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'bulonera2DataSet.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter.Fill(this.bulonera2DataSet.USUARIOS);
-
-        }
     }
+
 }
+
+

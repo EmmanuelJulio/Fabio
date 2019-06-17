@@ -16,7 +16,10 @@ namespace fabio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Login lg = new Login();
+            fabio.Configuraciones.UserConfig.frm_AddUser lg = new Configuraciones.UserConfig.frm_AddUser();
+            Application.Run(lg);
+            
         }
     }
 }

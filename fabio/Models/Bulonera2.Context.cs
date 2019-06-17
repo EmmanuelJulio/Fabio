@@ -15,10 +15,10 @@ namespace fabio.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class bulonera2Entities1 : DbContext
+    public partial class bulonera2 : DbContext
     {
-        public bulonera2Entities1()
-            : base("name=bulonera2Entities1")
+        public bulonera2()
+            : base("name=bulonera2")
         {
         }
     
@@ -27,12 +27,13 @@ namespace fabio.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<DICCIONARIO_FAB> DICCIONARIO_FAB { get; set; }
         public virtual DbSet<MODULO_USUARIO> MODULO_USUARIO { get; set; }
         public virtual DbSet<MODULOS> MODULOS { get; set; }
         public virtual DbSet<SUBMENU> SUBMENU { get; set; }
         public virtual DbSet<SUBMODULOS> SUBMODULOS { get; set; }
-        public virtual DbSet<USUARIOS> USUARIOS { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<USUARIOS> USUARIOS { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -126,7 +126,7 @@ namespace fabio
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            using(Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            using(Models.bulonera2 db = new Models.bulonera2())
             {
                 var list = db.USUARIOS;
                 bool usuario=false;
@@ -163,6 +163,11 @@ namespace fabio
                     
                 }
             }
+        }
+
+        private void PictureBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            pictureBox1.BackColor = Color.AliceBlue;
         }
     }
 }

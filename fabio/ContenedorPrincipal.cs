@@ -75,7 +75,7 @@ namespace fabio
             Pnl_subsubmdoulos.Width = 1;
             string usu = Login.USUARIO;
             int id_usu = Login.ID_usuario;
-            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            using (Models.bulonera2 db = new Models.bulonera2())
             {
               var modulos= db.Database.SqlQuery<sp_modulospermitidos>("sp_modulospermitidos @p0",id_usu).ToList();
                 foreach (var Omodulo in modulos)
@@ -147,7 +147,7 @@ namespace fabio
             string nombreSub = ((Button)sender).Text;
             lbl_texto.Text = nombreSub;
             moduloselecionado = nombreSub;
-            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            using (Models.bulonera2 db = new Models.bulonera2())
             {
                 var submodulos = db.Database.SqlQuery<Sp_Submodulos>("Sp_Submodulos @p0", nombreSub).ToList();
                 foreach (var submoduli in submodulos)
@@ -179,7 +179,7 @@ namespace fabio
             lbl_texto.Text = nombreSub2;
             opcionseleccionada = nombreSub2;
            // lbl_SubSubmodulo.Text = nombreSub2;
-            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            using (Models.bulonera2 db = new Models.bulonera2())
             {
                 var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
                 foreach (var submoduli in submodulos)
@@ -208,7 +208,7 @@ namespace fabio
             string nombreSub3 = ((Button)sender).Text;
            
 
-            using (Models.bulonera2Entities1 db = new Models.bulonera2Entities1())
+            using (Models.bulonera2 db = new Models.bulonera2())
             {
                 var Subme = from Submenu in db.SUBMENU
                              where Submenu.subMenu_nombre == nombreSub3
@@ -229,6 +229,7 @@ namespace fabio
                         }
 
                         Assembly asm = Assembly.GetEntryAssembly();
+                        //fabio.Configuraciones.UserConfig
                         Type formtype = asm.GetType(string.Format("{0}.{1}", NameSpace, Nombreform));
 
                         Form f = (Form)Activator.CreateInstance(formtype);
