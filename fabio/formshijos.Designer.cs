@@ -33,11 +33,11 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnl_nav = new System.Windows.Forms.Panel();
             this.lbl_modulo = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_MinimizeWindow = new System.Windows.Forms.PictureBox();
             this.btn_MaximiseWindow = new System.Windows.Forms.PictureBox();
             this.btn_normalWindow = new System.Windows.Forms.PictureBox();
             this.btn_CloseForm = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnl_nav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
@@ -53,6 +53,7 @@
             // pnl_nav
             // 
             resources.ApplyResources(this.pnl_nav, "pnl_nav");
+            this.pnl_nav.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.pnl_nav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(112)))), ((int)(((byte)(183)))));
             this.pnl_nav.Controls.Add(this.lbl_modulo);
             this.pnl_nav.Controls.Add(this.btn_MinimizeWindow);
@@ -66,13 +67,6 @@
             resources.ApplyResources(this.lbl_modulo, "lbl_modulo");
             this.lbl_modulo.ForeColor = System.Drawing.Color.Silver;
             this.lbl_modulo.Name = "lbl_modulo";
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = false;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.pnl_nav;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // btn_MinimizeWindow
             // 
@@ -102,6 +96,13 @@
             this.btn_CloseForm.TabStop = false;
             this.btn_CloseForm.Click += new System.EventHandler(this.Btn_CloseForm_Click);
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = false;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.pnl_nav;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // formshijos
             // 
             resources.ApplyResources(this, "$this");
@@ -123,12 +124,12 @@
 
         #endregion
         private Bunifu.Framework.UI.BunifuCustomLabel lbl_modulo;
-        public System.Windows.Forms.Panel pnl_nav;
         public Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         public Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public System.Windows.Forms.PictureBox btn_MinimizeWindow;
         public System.Windows.Forms.PictureBox btn_MaximiseWindow;
         public System.Windows.Forms.PictureBox btn_normalWindow;
         public System.Windows.Forms.PictureBox btn_CloseForm;
+        public System.Windows.Forms.Panel pnl_nav;
     }
 }

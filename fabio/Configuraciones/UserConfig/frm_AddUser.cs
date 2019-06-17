@@ -21,11 +21,15 @@ namespace fabio.Configuraciones.UserConfig
 
         private void Frm_AddUser_Load(object sender, EventArgs e)
         {
-            var sectores = (from p in db.DICCIONARIO_FAB
-                            where p.dic_cab == 28
-                            select p).ToList();
-            combo_seccion.ValueMember = "dic_des";
-            combo_seccion.DataSource = sectores;
+            using(Models.bulonera2 db= new Models.bulonera2())
+            {
+                var sectores = (from p in db.DICCIONARIO_FAB
+                                where p.dic_cab == 28
+                                select p).ToList();
+                combo_seccion.ValueMember = "dic_des";
+                combo_seccion.DataSource = sectores;
+            }
+            
 
         }
 

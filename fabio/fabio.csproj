@@ -68,6 +68,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Configuraciones\Modulos\frm_submenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuraciones\Modulos\frm_submenus.Designer.cs">
+      <DependentUpon>frm_submenus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuraciones\UserConfig\frm_AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,10 @@
     <Compile Include="Procedures\sp_Procedures.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Configuraciones\Modulos\frm_submenus.resx">
+      <DependentUpon>frm_submenus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Configuraciones\UserConfig\frm_AddUser.resx">
       <DependentUpon>frm_AddUser.cs</DependentUpon>
     </EmbeddedResource>

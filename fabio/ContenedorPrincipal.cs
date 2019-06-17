@@ -23,22 +23,11 @@ namespace fabio
         public static string Opcionmodseleccionada;
         public string opcionseleccionada;
         public string formularioseleccionado;
-        public void Deslizar(Panel Aesconeder,Panel Amostrar)
+        public  void Deslizar(Panel Aesconeder,Panel Amostrar)
         {
-            //while (Aesconeder.Width > 1)
-            //{
-            //    Aesconeder.Width -= 3;
-
-            //}
-            //while (Amostrar.Width < 280)
-            //{
-            //    Amostrar.Width += 3;
-            //}
                 PanelAnimator.HideSync(Aesconeder);
                 PanelAnimator.ShowSync(Amostrar);
                  Amostrar.Width = 280;
-                // SystemSounds.Asterisk.Play();
-
         }
         public ContenedorPrincipal()
         {
@@ -46,25 +35,7 @@ namespace fabio
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
-       // protected override void WndProc(ref Message n)
-        //{
-        //    if (n.Msg == 0x84)
-        //    {
-        //        Point pos = new Point(n.LParam.ToInt32());
-        //        pos = this.PointToClient(pos);
-        //        if(pos.Y < cCaption)
-        //        {
-        //            n.Result = (IntPtr)2;
-        //            return;
-        //        }
-        //        if (pos.X>=this.ClientSize.Width-cGrip && pos.Y >= this.ClientSize.Height -cGrip)
-        //        {
-        //            n.Result = (IntPtr)17;
-        //            return;
-        //        }
-        //    }
-        //    base.WndProc(ref n);
-        //}
+       
         //Cargo todos los botones que tenga permitido el usuario que ingreso los botones se van a llamar depende lo que diga la base de datos 
         //pero en el programa seran buton
         private void ContenedorPrincipal_Load(object sender, EventArgs e)
@@ -89,6 +60,12 @@ namespace fabio
                     Boton.FlatStyle = FlatStyle.Flat;
                     Boton.ForeColor = Color.FromArgb(45, 45, 48);
                     Boton.Click+= new EventHandler(Boton_Click);
+                    Boton.BackColor = Color.FromArgb(18, 134, 219);
+                   
+                    Boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    Boton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    Boton.ForeColor = Color.Silver;
+                    Boton.FlatAppearance.BorderSize = 0;
                     Panel_botones.Controls.Add(Boton);
                 }
             }
@@ -123,11 +100,6 @@ namespace fabio
         }
         //lo que ocurre cuando precionas un boton de l modulo es preparar los botones que contiene ese modulo en otro panel
         //al apretar uno de estos se crean los botones en el panel Pnl_subsubmdoulos
-        private void BunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //lo que oasa cuadno se terminan de crear todas las opcciones
         //ultimo paso de carga de botones
         private void Boton_Click(object sender, EventArgs e)
@@ -141,8 +113,6 @@ namespace fabio
             {
                 Btn_volvermodulos.Visible = false;
             }
-
-
             Btn_volveropciones.Visible = false;
             string nombreSub = ((Button)sender).Text;
             lbl_texto.Text = nombreSub;
@@ -157,51 +127,19 @@ namespace fabio
                     botonSub.AccessibleName = submoduli.SYS_NOM;
                     botonSub.Dock = DockStyle.Top;
                     botonSub.Height = 30;
-                    botonSub.BackColor = Color.FromArgb(84, 132, 182);
-                    botonSub.FlatStyle = FlatStyle.Flat;
-                    botonSub.ForeColor = Color.FromArgb(45, 45, 48);
+                    botonSub.BackColor = Color.FromArgb(15, 112, 183);
+                    botonSub.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    botonSub.ForeColor = Color.Silver;
+                    botonSub.FlatAppearance.BorderSize = 0;
                     botonSub.Click += new EventHandler(BotonSub_Click);
                     pnl_submodulos.Controls.Add(botonSub);
 
                 }
             }
-
             Deslizar(Panel_botones, pnl_submodulos);
-        }
-        private void BotonSub_Click(object sender, EventArgs e)
-        {
-            Btn_volvermodulos.Visible = false;
-            Btn_volveropciones.Visible = true;
-           // Deslisarmenu(PNL_Modulos);
-            Pnl_subsubmdoulos.Controls.Clear();
-
-            string nombreSub2 = ((Button)sender).Text;
-            lbl_texto.Text = nombreSub2;
-            opcionseleccionada = nombreSub2;
-           // lbl_SubSubmodulo.Text = nombreSub2;
-            using (Models.bulonera2 db = new Models.bulonera2())
-            {
-                var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
-                foreach (var submoduli in submodulos)
-                {
-                    Button BotonSub3 = new Button();
-                    BotonSub3.Text = submoduli.subMenu_nombre;
-                    BotonSub3.AccessibleName = submoduli.subMenu_Sys;
-                    BotonSub3.Dock = DockStyle.Top;
-                    BotonSub3.Height = 30;
-                    BotonSub3.BackColor = Color.FromArgb(220, 78, 65);
-                    BotonSub3.FlatStyle = FlatStyle.Flat;
-                    BotonSub3.ForeColor = Color.FromArgb(45, 45, 48);
-                    BotonSub3.Click += new EventHandler(BotonSub3_Click);
-                    Pnl_subsubmdoulos.Controls.Add(BotonSub3);
-
-                }
-            }
-            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
-     
-        }
+            
+        }   
         //este boton me va a abrir los forms
-
         private void BotonSub3_Click(object sender, EventArgs e)
         {
 
@@ -252,15 +190,44 @@ namespace fabio
            
           
         }
-       
+        private void BotonSub_Click(object sender, EventArgs e)
+        {
+            Btn_volvermodulos.Visible = false;
+            Btn_volveropciones.Visible = true;
+            Pnl_subsubmdoulos.Controls.Clear();
+            string nombreSub2 = ((Button)sender).Text;
+            lbl_texto.Text = nombreSub2;
+            opcionseleccionada = nombreSub2;
+            using (Models.bulonera2 db = new Models.bulonera2())
+            {
+                var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
+                foreach (var submoduli in submodulos)
+                {
+                    Button BotonSub3 = new Button();
+                    BotonSub3.Text = submoduli.subMenu_nombre;
+                    BotonSub3.AccessibleName = submoduli.subMenu_Sys;
+                    BotonSub3.Dock = DockStyle.Top;
+                    BotonSub3.Height = 30;
+                    BotonSub3.BackColor = Color.FromArgb(15, 112, 183);
+                    BotonSub3.FlatStyle = FlatStyle.Flat;
+                    BotonSub3.ForeColor = Color.FromArgb(45, 45, 48);
+                    BotonSub3.Click += new EventHandler(BotonSub3_Click);
+                    BotonSub3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    BotonSub3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    BotonSub3.ForeColor = Color.Silver;
+                    BotonSub3.FlatAppearance.BorderSize = 0;
+                    Pnl_subsubmdoulos.Controls.Add(BotonSub3);
+                }
+            }
+            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
+        }
         public void AbrirFormHijo(object formhijo)
         {
             if (this.contenedor.Controls.Count > 0)
             {
                 this.contenedor.Controls.RemoveAt(0);
             }
-            else
-            {
+            
                 Form fh = formhijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.None;
@@ -269,32 +236,7 @@ namespace fabio
                 fh.Dock = DockStyle.Fill;
                 fh.Show();
                 
-            }
-        }
-        
-
-        public void OpenForm(String NombreForm,String NameSpace)
-        {
-           
-           
-
-        }
-        
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-            Login lg = new Login();
-        }
-
-        
-
-      
-
-      
-
-        private void Btn_volverModulos_Click(object sender, EventArgs e)
-        {
-          //  Deslizar(PanelOpcionesModulos, modulos);
+            
         }
 
         private void Btn_volveropciones_Click(object sender, EventArgs e)
@@ -313,10 +255,6 @@ namespace fabio
             Deslizar(Pnl_subsubmdoulos, pnl_submodulos);
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 

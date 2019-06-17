@@ -30,7 +30,6 @@
         {
             this.pnl_UserDat = new System.Windows.Forms.Panel();
             this.combo_seccion = new System.Windows.Forms.ComboBox();
-            this.btnlogin = new System.Windows.Forms.Button();
             this.txt_pass2 = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.Txt_Usuario = new System.Windows.Forms.TextBox();
@@ -43,17 +42,14 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pnl_nav.SuspendLayout();
+            this.Btnlogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).BeginInit();
+            this.pnl_nav.SuspendLayout();
             this.pnl_UserDat.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnl_nav
-            // 
-            this.pnl_nav.Size = new System.Drawing.Size(882, 22);
             // 
             // bunifuDragControl1
             // 
@@ -79,10 +75,14 @@
             this.btn_CloseForm.Location = new System.Drawing.Point(861, 0);
             this.btn_CloseForm.Size = new System.Drawing.Size(21, 22);
             // 
+            // pnl_nav
+            // 
+            this.pnl_nav.Size = new System.Drawing.Size(882, 22);
+            // 
             // pnl_UserDat
             // 
+            this.pnl_UserDat.Controls.Add(this.Btnlogin);
             this.pnl_UserDat.Controls.Add(this.combo_seccion);
-            this.pnl_UserDat.Controls.Add(this.btnlogin);
             this.pnl_UserDat.Controls.Add(this.txt_pass2);
             this.pnl_UserDat.Controls.Add(this.txt_pass);
             this.pnl_UserDat.Controls.Add(this.Txt_Usuario);
@@ -106,22 +106,6 @@
             this.combo_seccion.Size = new System.Drawing.Size(283, 28);
             this.combo_seccion.TabIndex = 27;
             this.combo_seccion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Nombre_KeyDown);
-            // 
-            // btnlogin
-            // 
-            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnlogin.Location = new System.Drawing.Point(367, 299);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(173, 36);
-            this.btnlogin.TabIndex = 25;
-            this.btnlogin.Text = "Guardar";
-            this.btnlogin.UseVisualStyleBackColor = false;
-            this.btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
             // 
             // txt_pass2
             // 
@@ -294,6 +278,22 @@
             this.bunifuCustomLabel1.TabIndex = 21;
             this.bunifuCustomLabel1.Text = "Agregar Usuario";
             // 
+            // Btnlogin
+            // 
+            this.Btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.Btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.Btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.Btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnlogin.ForeColor = System.Drawing.Color.LightGray;
+            this.Btnlogin.Location = new System.Drawing.Point(357, 300);
+            this.Btnlogin.Name = "Btnlogin";
+            this.Btnlogin.Size = new System.Drawing.Size(173, 40);
+            this.Btnlogin.TabIndex = 28;
+            this.Btnlogin.Text = "Agregar usuario";
+            this.Btnlogin.UseVisualStyleBackColor = false;
+            this.Btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
+            // 
             // frm_AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -307,12 +307,12 @@
             this.Load += new System.EventHandler(this.Frm_AddUser_Load);
             this.Controls.SetChildIndex(this.pnl_nav, 0);
             this.Controls.SetChildIndex(this.pnl_UserDat, 0);
-            this.pnl_nav.ResumeLayout(false);
-            this.pnl_nav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).EndInit();
+            this.pnl_nav.ResumeLayout(false);
+            this.pnl_nav.PerformLayout();
             this.pnl_UserDat.ResumeLayout(false);
             this.pnl_UserDat.PerformLayout();
             this.ResumeLayout(false);
@@ -324,7 +324,6 @@
       //  private System.Windows.Forms.BindingSource mODULOSBindingSource;
         
         private System.Windows.Forms.Panel pnl_UserDat;
-        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.TextBox txt_pass2;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox Txt_Usuario;
@@ -338,5 +337,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.ComboBox combo_seccion;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private System.Windows.Forms.Button Btnlogin;
     }
 }

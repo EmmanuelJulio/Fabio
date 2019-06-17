@@ -28,16 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnl_nav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            // 
+            // btn_MinimizeWindow
+            // 
+            this.btn_MinimizeWindow.Location = new System.Drawing.Point(1116, 0);
             // 
             // frm_asignacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 623);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frm_asignacion";
             this.Text = "frm_asignacion";
             this.Load += new System.EventHandler(this.Frm_asignacion_Load);
+            this.pnl_nav.ResumeLayout(false);
+            this.pnl_nav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_CloseForm)).EndInit();
             this.ResumeLayout(false);
 
         }

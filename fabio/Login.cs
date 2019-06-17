@@ -45,6 +45,7 @@ namespace fabio
             else
             {
                 HORA.Enabled = false;
+                timerHora.Enabled = false;
             }
 
 
