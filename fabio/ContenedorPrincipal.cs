@@ -104,7 +104,7 @@ namespace fabio
         //ultimo paso de carga de botones
         private void Boton_Click(object sender, EventArgs e)
         {
-            Deslizar(Panel_botones, pnl_submodulos);
+            
             pnl_submodulos.Controls.Clear();
            
             if (Panel_botones.Width > 4)
@@ -139,8 +139,8 @@ namespace fabio
 
                 }
             }
-            
-            
+
+            Deslizar(Panel_botones, pnl_submodulos);
         }   
         //este boton me va a abrir los forms
         private void BotonSub3_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace fabio
         }
         private void BotonSub_Click(object sender, EventArgs e)
         {
-            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
+            
             Btn_volvermodulos.Visible = false;
             Btn_volveropciones.Visible = true;
             Pnl_subsubmdoulos.Controls.Clear();
@@ -223,7 +223,7 @@ namespace fabio
                     Pnl_subsubmdoulos.Controls.Add(BotonSub3);
                 }
             }
-            
+            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
         }
         public void AbrirFormHijo(object formhijo)
         {

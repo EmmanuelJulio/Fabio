@@ -124,6 +124,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formshijos";
             this.Load += new System.EventHandler(this.Formshijos_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Formshijos_MouseClick);
             this.pnl_nav.ResumeLayout(false);
             this.pnl_nav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).EndInit();

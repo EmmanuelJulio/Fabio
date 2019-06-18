@@ -131,7 +131,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 623</value>
+    <value>1000, 623</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_desacoplar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -144,7 +144,7 @@
     <value>Century Gothic, 8.25pt</value>
   </data>
   <data name="btn_desacoplar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>974, 0</value>
+    <value>774, 0</value>
   </data>
   <data name="btn_desacoplar.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 23</value>
@@ -225,7 +225,7 @@
 </value>
   </data>
   <data name="btn_MinimizeWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1116, 0</value>
+    <value>916, 0</value>
   </data>
   <data name="btn_MinimizeWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -271,7 +271,7 @@
 </value>
   </data>
   <data name="btn_MaximiseWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1137, 0</value>
+    <value>937, 0</value>
   </data>
   <data name="btn_MaximiseWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -326,7 +326,7 @@
 </value>
   </data>
   <data name="btn_normalWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1158, 0</value>
+    <value>958, 0</value>
   </data>
   <data name="btn_normalWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -377,7 +377,7 @@
 </value>
   </data>
   <data name="btn_CloseForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1179, 0</value>
+    <value>979, 0</value>
   </data>
   <data name="btn_CloseForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -413,7 +413,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="pnl_nav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 23</value>
+    <value>1000, 23</value>
   </data>
   <data name="pnl_nav.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

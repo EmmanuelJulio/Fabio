@@ -79,14 +79,24 @@ namespace fabio
                 this.Parent.Controls.Remove(this);
                 this.TopLevel = true;
             }
-            else
-            {
-                this.TopLevel = false;
-                (this.Parent.Controls["..."] as Panel).Controls.Add(this);
-                
-            }
+            
            
         }
-       
+        int ancho = 1000;
+        int alto = 623;
+        private void Formshijos_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button!= MouseButtons.Left)
+                {
+                ancho = e.X;
+                alto = e.Y;
+            }
+            else
+            {
+                this.Width = (e.X - ancho);
+                this.Height = (e.Y - alto);
+            }
+
+        }
     }
 }
