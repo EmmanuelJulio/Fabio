@@ -56,6 +56,7 @@ namespace fabio.Configuraciones.Modulos
 
         private void Btn_nuevoSub_Click(object sender, EventArgs e)
         {
+            listb_modulos.Items.Clear();
             foreach (var mod in ModulosFijados)
             {
                 listb_modulos.Items.Add(mod.NOMBRE_MOD);
@@ -145,13 +146,31 @@ namespace fabio.Configuraciones.Modulos
 
         private void Btn_guardarSubmod_Click(object sender, EventArgs e)
         {
-            using(var dbtransaccion = new Models.bulonera2Entitys())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
-                Models.SUBMODULOS OSubmodulo = new Models.SUBMODULOS();
-                OSubmodulo.ID_MODULO = Convert.ToInt32((from x in ModulosFijados where x.NOMBRE_MOD == listb_modulos.SelectedItem.ToString() select x.ID_MODULO).ToString());
-                OSubmodulo.NOMBRE_SUBMOD = txt_subnom.Text;
-                OSubmodulo.SYS_NOM = listb_modulos.SelectedItem.ToString();
-                
+                using (var dbtransaccion = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        Models.SUBMODULOS id_mod = (from x in ModulosFijados where x.NOMBRE_MOD == listb_modulos.SelectedItem.ToString() select x).;
+                        
+                        Models.SUBMODULOS OSubmodulo = new Models.SUBMODULOS();
+                       // OSubmodulo.ID_MODULO = 
+                        //OSubmodulo.NOMBRE_SUBMOD = txt_subnom.Text;
+                       // OSubmodulo.SYS_NOM = listb_modulos.SelectedItem.ToString();
+                       // db.SUBMODULOS.Add(OSubmodulo);
+                        db.SaveChanges();
+                        dbtransaccion.Commit();
+                        MessageBoxPers.message("Se completo el ingreso", MessageBoxPers.Messagetype.Hecho);
+
+
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message);
+                        MessageBoxPers.message("No se completo el ingreso", MessageBoxPers.Messagetype.Error); 
+                    }
+                } 
             }
         }
 
