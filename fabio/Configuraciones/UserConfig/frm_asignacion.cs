@@ -19,7 +19,7 @@ namespace fabio.Configuraciones.UserConfig
 
         private void Frm_asignacion_Load(object sender, EventArgs e)
         {
-            using (Models.bulonera2 db = new Models.bulonera2())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 
 

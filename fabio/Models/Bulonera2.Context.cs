@@ -15,10 +15,10 @@ namespace fabio.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class bulonera2 : DbContext
+    public partial class bulonera2Entitys : DbContext
     {
-        public bulonera2()
-            : base("name=bulonera2")
+        public bulonera2Entitys()
+            : base("name=bulonera2Entitys")
         {
         }
     

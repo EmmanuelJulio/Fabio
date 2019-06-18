@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a369d7146ab947f797cb290ed04f6edd" Name="Diagram1">
+      <Diagram DiagramId="a369d7146ab947f797cb290ed04f6edd" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="bulonera2Model.DICCIONARIO_FAB" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bulonera2Model.MODULO_USUARIO" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bulonera2Model.MODULOS" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="bulonera2Model.SUBMENU" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="bulonera2Model.SUBMODULOS" Width="1.5" PointX="3.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bulonera2Model.MODULOS" Width="1.5" PointX="0.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bulonera2Model.SUBMENU" Width="1.5" PointX="8.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="bulonera2Model.SUBMODULOS" Width="1.5" PointX="4.5" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="bulonera2Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bulonera2Model.USUARIOS" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bulonera2Model.USUARIOS" Width="1.5" PointX="0.625" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="bulonera2Model.FK_MODULO_USUARIO_MODULOS" ManuallyRouted="false" />
         <AssociationConnector Association="bulonera2Model.FK_MODULO_USUARIO_USUARIOS" ManuallyRouted="false" />
         <AssociationConnector Association="bulonera2Model.FK_SUBMODULOS_MODULOS" ManuallyRouted="false" />

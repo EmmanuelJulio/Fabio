@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnl_UserDat = new System.Windows.Forms.Panel();
+            this.Btnlogin = new System.Windows.Forms.Button();
             this.combo_seccion = new System.Windows.Forms.ComboBox();
             this.txt_pass2 = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.Btnlogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
@@ -94,6 +94,22 @@
             this.pnl_UserDat.Name = "pnl_UserDat";
             this.pnl_UserDat.Size = new System.Drawing.Size(882, 541);
             this.pnl_UserDat.TabIndex = 20;
+            // 
+            // Btnlogin
+            // 
+            this.Btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.Btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.Btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.Btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btnlogin.ForeColor = System.Drawing.Color.LightGray;
+            this.Btnlogin.Location = new System.Drawing.Point(357, 300);
+            this.Btnlogin.Name = "Btnlogin";
+            this.Btnlogin.Size = new System.Drawing.Size(173, 40);
+            this.Btnlogin.TabIndex = 28;
+            this.Btnlogin.Text = "Agregar usuario";
+            this.Btnlogin.UseVisualStyleBackColor = false;
+            this.Btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
             // 
             // combo_seccion
             // 
@@ -277,22 +293,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(115, 18);
             this.bunifuCustomLabel1.TabIndex = 21;
             this.bunifuCustomLabel1.Text = "Agregar Usuario";
-            // 
-            // Btnlogin
-            // 
-            this.Btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.Btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.Btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.Btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btnlogin.ForeColor = System.Drawing.Color.LightGray;
-            this.Btnlogin.Location = new System.Drawing.Point(357, 300);
-            this.Btnlogin.Name = "Btnlogin";
-            this.Btnlogin.Size = new System.Drawing.Size(173, 40);
-            this.Btnlogin.TabIndex = 28;
-            this.Btnlogin.Text = "Agregar usuario";
-            this.Btnlogin.UseVisualStyleBackColor = false;
-            this.Btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
             // 
             // frm_AddUser
             // 

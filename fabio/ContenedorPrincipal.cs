@@ -46,7 +46,7 @@ namespace fabio
             Pnl_subsubmdoulos.Width = 1;
             string usu = Login.USUARIO;
             int id_usu = Login.ID_usuario;
-            using (Models.bulonera2 db = new Models.bulonera2())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
               var modulos= db.Database.SqlQuery<sp_modulospermitidos>("sp_modulospermitidos @p0",id_usu).ToList();
                 foreach (var Omodulo in modulos)
@@ -61,7 +61,7 @@ namespace fabio
                     Boton.ForeColor = Color.FromArgb(45, 45, 48);
                     Boton.Click+= new EventHandler(Boton_Click);
                     Boton.BackColor = Color.FromArgb(18, 134, 219);
-                   
+                    
                     Boton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                     Boton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     Boton.ForeColor = Color.Silver;
@@ -104,7 +104,9 @@ namespace fabio
         //ultimo paso de carga de botones
         private void Boton_Click(object sender, EventArgs e)
         {
+            Deslizar(Panel_botones, pnl_submodulos);
             pnl_submodulos.Controls.Clear();
+           
             if (Panel_botones.Width > 4)
             {
                 Btn_volvermodulos.Visible = true;
@@ -117,16 +119,17 @@ namespace fabio
             string nombreSub = ((Button)sender).Text;
             lbl_texto.Text = nombreSub;
             moduloselecionado = nombreSub;
-            using (Models.bulonera2 db = new Models.bulonera2())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 var submodulos = db.Database.SqlQuery<Sp_Submodulos>("Sp_Submodulos @p0", nombreSub).ToList();
-                foreach (var submoduli in submodulos)
+                foreach (var submodulo in submodulos)
                 {
                     Button botonSub = new Button();
-                    botonSub.Text = submoduli.NOMBRE_SUBMOD;
-                    botonSub.AccessibleName = submoduli.SYS_NOM;
+                    botonSub.Text = submodulo.NOMBRE_SUBMOD;
+                    botonSub.AccessibleName = submodulo.SYS_NOM;
                     botonSub.Dock = DockStyle.Top;
                     botonSub.Height = 30;
+                    botonSub.FlatStyle = FlatStyle.Flat;
                     botonSub.BackColor = Color.FromArgb(15, 112, 183);
                     botonSub.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     botonSub.ForeColor = Color.Silver;
@@ -136,17 +139,17 @@ namespace fabio
 
                 }
             }
-            Deslizar(Panel_botones, pnl_submodulos);
+            
             
         }   
         //este boton me va a abrir los forms
         private void BotonSub3_Click(object sender, EventArgs e)
         {
-
+            
             string nombreSub3 = ((Button)sender).Text;
            
 
-            using (Models.bulonera2 db = new Models.bulonera2())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 var Subme = from Submenu in db.SUBMENU
                              where Submenu.subMenu_nombre == nombreSub3
@@ -177,8 +180,8 @@ namespace fabio
                     }
                     catch (Exception)
                     {
-
-                        throw;
+                        MessageBoxPers.message("No se encontro el modulo", MessageBoxPers.Messagetype.Error);
+                      
                     }
                         
                     
@@ -192,13 +195,14 @@ namespace fabio
         }
         private void BotonSub_Click(object sender, EventArgs e)
         {
+            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
             Btn_volvermodulos.Visible = false;
             Btn_volveropciones.Visible = true;
             Pnl_subsubmdoulos.Controls.Clear();
             string nombreSub2 = ((Button)sender).Text;
             lbl_texto.Text = nombreSub2;
             opcionseleccionada = nombreSub2;
-            using (Models.bulonera2 db = new Models.bulonera2())
+            using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 var submodulos = db.Database.SqlQuery<Sp_SubMenus>("Sp_SubMenus @p0", nombreSub2).ToList();
                 foreach (var submoduli in submodulos)
@@ -219,7 +223,7 @@ namespace fabio
                     Pnl_subsubmdoulos.Controls.Add(BotonSub3);
                 }
             }
-            Deslizar(pnl_submodulos, Pnl_subsubmdoulos);
+            
         }
         public void AbrirFormHijo(object formhijo)
         {

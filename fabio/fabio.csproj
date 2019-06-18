@@ -33,15 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.4, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Desktop\bonifu\Bunifu_UI_v1.4.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>D:\Users\Emanuel Julio\Desktop\bonifu\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Crom.Controls.Docking">
+      <HintPath>..\..\..\..\..\Desktop\Crom.Controls.Docking.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.Fakes">
+      <HintPath>FakesAssemblies\EntityFramework.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -251,6 +259,7 @@
     <None Include="bulonera2DataSet.xss">
       <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
     </None>
+    <Fakes Include="Fakes\EntityFramework.fakes" />
     <None Include="Models\Bulonera2.edmx.diagram">
       <DependentUpon>Bulonera2.edmx</DependentUpon>
     </None>

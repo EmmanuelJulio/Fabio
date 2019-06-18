@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_submenus));
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelopcion = new System.Windows.Forms.Panel();
@@ -37,6 +37,8 @@
             this.btn_nuevofrm = new System.Windows.Forms.Button();
             this.btn_nuevoSub = new System.Windows.Forms.Button();
             this.btn_nmodulo = new System.Windows.Forms.Button();
+            this.pnl_submod = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnl_modulos = new System.Windows.Forms.Panel();
             this.txt_codmod = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -49,12 +51,11 @@
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.pnl_forms = new System.Windows.Forms.Panel();
             this.lbl_texto = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pnl_submod = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panelanimator = new BunifuAnimatorNS.Animator(this.components);
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_normalWindow)).BeginInit();
@@ -62,9 +63,9 @@
             this.pnl_nav.SuspendLayout();
             this.panelopcion.SuspendLayout();
             this.botones.SuspendLayout();
+            this.pnl_submod.SuspendLayout();
             this.pnl_modulos.SuspendLayout();
             this.pnl_forms.SuspendLayout();
-            this.pnl_submod.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -74,19 +75,21 @@
             // btn_MinimizeWindow
             // 
             this.panelanimator.SetDecoration(this.btn_MinimizeWindow, BunifuAnimatorNS.DecorationType.None);
-            this.btn_MinimizeWindow.Location = new System.Drawing.Point(1116, 0);
+            this.btn_MinimizeWindow.Location = new System.Drawing.Point(974, 0);
             this.btn_MinimizeWindow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_MinimizeWindow.Size = new System.Drawing.Size(21, 26);
             // 
             // btn_MaximiseWindow
             // 
             this.panelanimator.SetDecoration(this.btn_MaximiseWindow, BunifuAnimatorNS.DecorationType.None);
+            this.btn_MaximiseWindow.Location = new System.Drawing.Point(995, 0);
             this.btn_MaximiseWindow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_MaximiseWindow.Size = new System.Drawing.Size(21, 26);
             // 
             // btn_normalWindow
             // 
             this.panelanimator.SetDecoration(this.btn_normalWindow, BunifuAnimatorNS.DecorationType.None);
+            this.btn_normalWindow.Location = new System.Drawing.Point(1016, 0);
             this.btn_normalWindow.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_normalWindow.Size = new System.Drawing.Size(21, 26);
             this.btn_normalWindow.Click += new System.EventHandler(this.Btn_normalWindow_Click);
@@ -94,6 +97,7 @@
             // btn_CloseForm
             // 
             this.panelanimator.SetDecoration(this.btn_CloseForm, BunifuAnimatorNS.DecorationType.None);
+            this.btn_CloseForm.Location = new System.Drawing.Point(1037, 0);
             this.btn_CloseForm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_CloseForm.Size = new System.Drawing.Size(21, 26);
             // 
@@ -195,6 +199,33 @@
             this.btn_nmodulo.Text = "Agregar Modulo";
             this.btn_nmodulo.UseVisualStyleBackColor = false;
             this.btn_nmodulo.Click += new System.EventHandler(this.Btn_nmodulo_Click);
+            // 
+            // pnl_submod
+            // 
+            this.pnl_submod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.pnl_submod.Controls.Add(this.listView1);
+            this.pnl_submod.Controls.Add(this.bunifuCustomLabel1);
+            this.panelanimator.SetDecoration(this.pnl_submod, BunifuAnimatorNS.DecorationType.None);
+            this.pnl_submod.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_submod.Location = new System.Drawing.Point(0, 0);
+            this.pnl_submod.Name = "pnl_submod";
+            this.pnl_submod.Size = new System.Drawing.Size(1200, 692);
+            this.pnl_submod.TabIndex = 25;
+            this.pnl_submod.Visible = false;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.panelanimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Silver;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(49, 91);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(89, 18);
+            this.bunifuCustomLabel1.TabIndex = 5;
+            this.bunifuCustomLabel1.Text = "pnl_submod";
+            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_modulos
             // 
@@ -365,32 +396,6 @@
             this.lbl_texto.Text = "pnl_forms";
             this.lbl_texto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnl_submod
-            // 
-            this.pnl_submod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.pnl_submod.Controls.Add(this.bunifuCustomLabel1);
-            this.panelanimator.SetDecoration(this.pnl_submod, BunifuAnimatorNS.DecorationType.None);
-            this.pnl_submod.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_submod.Location = new System.Drawing.Point(0, 0);
-            this.pnl_submod.Name = "pnl_submod";
-            this.pnl_submod.Size = new System.Drawing.Size(1200, 692);
-            this.pnl_submod.TabIndex = 25;
-            this.pnl_submod.Visible = false;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.panelanimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(3, 91);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(89, 18);
-            this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "pnl_submod";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // shapeContainer1
             // 
             this.panelanimator.SetDecoration(this.shapeContainer1, BunifuAnimatorNS.DecorationType.None);
@@ -432,22 +437,31 @@
             // 
             this.panelanimator.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide;
             this.panelanimator.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.panelanimator.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.panelanimator.DefaultAnimation = animation1;
+            // 
+            // listView1
+            // 
+            this.panelanimator.SetDecoration(this.listView1, BunifuAnimatorNS.DecorationType.None);
+            this.listView1.Location = new System.Drawing.Point(38, 142);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(121, 168);
+            this.listView1.TabIndex = 6;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // frm_submenus
             // 
@@ -473,12 +487,12 @@
             this.pnl_nav.PerformLayout();
             this.panelopcion.ResumeLayout(false);
             this.botones.ResumeLayout(false);
+            this.pnl_submod.ResumeLayout(false);
+            this.pnl_submod.PerformLayout();
             this.pnl_modulos.ResumeLayout(false);
             this.pnl_modulos.PerformLayout();
             this.pnl_forms.ResumeLayout(false);
             this.pnl_forms.PerformLayout();
-            this.pnl_submod.ResumeLayout(false);
-            this.pnl_submod.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -509,5 +523,6 @@
         public Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private System.Windows.Forms.ListView listView1;
     }
 }

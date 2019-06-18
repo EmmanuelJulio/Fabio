@@ -21,7 +21,7 @@ namespace fabio.Configuraciones.UserConfig
 
         private void Frm_AddUser_Load(object sender, EventArgs e)
         {
-            using(Models.bulonera2 db= new Models.bulonera2())
+            using(Models.bulonera2Entitys db= new Models.bulonera2Entitys())
             {
                 var sectores = (from p in db.DICCIONARIO_FAB
                                 where p.dic_cab == 28
@@ -62,7 +62,7 @@ namespace fabio.Configuraciones.UserConfig
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            using(Models.bulonera2 db = new Models.bulonera2())
+            using(Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 var usuarios = (from us in db.USUARIOS
                                select us.nombre).ToList();
@@ -101,6 +101,7 @@ namespace fabio.Configuraciones.UserConfig
                         NuevoUsuario.contraseña = txt_pass.Text;
                         NuevoUsuario.acceso = "Total";
                         NuevoUsuario.sector = combo_seccion.Text;
+                        NuevoUsuario.nombre_usuario = Txt_Usuario.Text;
                         db.USUARIOS.Add(NuevoUsuario);
                         db.SaveChanges();
                         Txt_apellido.Text="Apellido";
@@ -110,6 +111,7 @@ namespace fabio.Configuraciones.UserConfig
                         combo_seccion.Text = "Sector";
                         Txt_Usuario.Text = "Nombre Usuario";
                         MessageBoxPers.message("Se ingreso el usuario, Debe de asignarle modulos", MessageBoxPers.Messagetype.Hecho);
+                        dbTransaccion.Commit();
 
                     }
                     catch (Exception)

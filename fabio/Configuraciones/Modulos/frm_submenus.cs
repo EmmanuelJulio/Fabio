@@ -75,7 +75,7 @@ namespace fabio.Configuraciones.Modulos
         {
             if (txt_Nombre.Text != "")
             {
-                using(Models.bulonera2 db = new Models.bulonera2())
+                using(Models.bulonera2Entitys db = new Models.bulonera2Entitys())
                 {
                     bool exist = false;
                     var modulos = (from x in db.MODULOS select x).ToList();

@@ -127,7 +127,7 @@ namespace fabio
 
         private void Btnlogin_Click(object sender, EventArgs e)
         {
-            using(Models.bulonera2 db = new Models.bulonera2())
+            using(Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
                 var list = db.USUARIOS;
                 bool usuario=false;
