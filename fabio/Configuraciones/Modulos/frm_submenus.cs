@@ -26,12 +26,10 @@ namespace fabio.Configuraciones.Modulos
             pnl_forms.Width = 0;
             using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
             {
-                var modulos = (from x in db.MODULOS select x).ToList();
-                var submodulos = (from x in db.SUBMODULOS select x).ToList();
-                var submenu = (from x in db.SUBMENU select x).ToList();
-                ModulosFijados = modulos;
-                SubModulosFijados = submodulos;
-                SubMenuFijados = submenu;
+                
+                ModulosFijados = (from x in db.MODULOS select x).ToList();
+                SubModulosFijados = (from x in db.SUBMODULOS select x).ToList();
+                SubMenuFijados = (from x in db.SUBMENU select x).ToList();
             }
             
         }
@@ -77,11 +75,18 @@ namespace fabio.Configuraciones.Modulos
             pnl_submod.Visible = false;
             pnl_modulos.Visible = false;
             pnl_forms.Visible = true;
+            listBox_modulos.Items.Clear();
+            listBox_submodulos.Items.Clear();
+            foreach (var MODULOS in ModulosFijados)
+            {
+                listBox_modulos.Items.Add(MODULOS.NOMBRE_MOD);
+            }
+           
         }
 
         private void Btn_normalWindow_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Normal;
         }
 
         private void BunifuCustomLabel5_Click(object sender, EventArgs e)
@@ -117,6 +122,8 @@ namespace fabio.Configuraciones.Modulos
                                 Nmodulo.NOMBRE_MOD = txt_Nombre.Text;
                                 Nmodulo.COD_MOD = txt_codmod.Text;
                                 Nmodulo.SECTOR_MOD = 1;
+                                ModulosFijados.Clear();
+                                ModulosFijados = (from x in db.MODULOS select x).ToList();
                                 db.MODULOS.Add(Nmodulo);
                                 db.SaveChanges();
                                 txt_codmod.Text="";
@@ -152,16 +159,19 @@ namespace fabio.Configuraciones.Modulos
                 {
                     try
                     {
-                        Models.SUBMODULOS id_mod = (from x in ModulosFijados where x.NOMBRE_MOD == listb_modulos.SelectedItem.ToString() select x).;
+                       
                         
                         Models.SUBMODULOS OSubmodulo = new Models.SUBMODULOS();
-                       // OSubmodulo.ID_MODULO = 
-                        //OSubmodulo.NOMBRE_SUBMOD = txt_subnom.Text;
-                       // OSubmodulo.SYS_NOM = listb_modulos.SelectedItem.ToString();
-                       // db.SUBMODULOS.Add(OSubmodulo);
+                        OSubmodulo.ID_MODULO =(from x in ModulosFijados where x.NOMBRE_MOD== listb_modulos.SelectedItem.ToString() select x.ID_MODULO).FirstOrDefault();
+                        OSubmodulo.NOMBRE_SUBMOD = txt_subnom.Text;
+                        OSubmodulo.SYS_NOM = listb_modulos.SelectedItem.ToString();
+                        db.SUBMODULOS.Add(OSubmodulo);
                         db.SaveChanges();
                         dbtransaccion.Commit();
                         MessageBoxPers.message("Se completo el ingreso", MessageBoxPers.Messagetype.Hecho);
+                        SubModulosFijados.Clear();
+                        SubModulosFijados = (from x in db.SUBMODULOS select x).ToList();
+
 
 
                     }
@@ -178,6 +188,89 @@ namespace fabio.Configuraciones.Modulos
         {
             MessageBoxPers.message("se ingresara en " + listb_modulos.SelectedItem.ToString(), MessageBoxPers.Messagetype.Informacion);
             panel1.Visible = true;
+        }
+
+        private void Btn_MaximiseWindow_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void Btn_MinimizeWindow_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Pnl_forms_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ListBox_modulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_modulos.SelectedItem!=null)
+            {
+                listBox_submodulos.Items.Clear();
+                int idMod = Configuraciones.Modulos.clsModulos.getIdModulo(((ListBox)sender).SelectedItem.ToString());
+                List<Models.SUBMODULOS> Submod = new List<Models.SUBMODULOS>();
+                using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
+                {
+
+                    Submod = (from x in db.SUBMODULOS where x.ID_MODULO == idMod select x).ToList();
+                    foreach (var submod in Submod)
+                    {
+                        listBox_submodulos.Items.Add(submod.NOMBRE_SUBMOD);
+                    }
+
+                } 
+            }
+        }
+
+        private void ListBox_submodulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_submodulos.SelectedItem != null)
+            {
+                MessageBoxPers.message("Se ingresara en " + listBox_submodulos.SelectedItem.ToString(), MessageBoxPers.Messagetype.Informacion);
+            }
+            
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+            if (textNombre.Text != "" & textFrmNombre.Text!="")
+            {
+                using (Models.bulonera2Entitys db = new Models.bulonera2Entitys())
+                {
+                    using (var Transaction = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            Models.SUBMENU Osubmenu = new Models.SUBMENU();
+                            Osubmenu.ID_SUBMODULO = Configuraciones.Modulos.clsModulos.getIdSubmodulo(listBox_submodulos.SelectedItem.ToString());
+                            Osubmenu.subMenu_nombre = textNombre.Text;
+                            Osubmenu.subMenu_Sys = textFrmNombre.Text;
+                            db.SUBMENU.Add(Osubmenu);
+                            db.SaveChanges();
+                            Transaction.Commit();
+                            Transaction.Dispose();
+                            MessageBoxPers.message("Se agrego el modulo " + textNombre.Text, MessageBoxPers.Messagetype.Hecho);
+                        }
+                        catch
+                        {
+                            MessageBoxPers.message("Ocurrio un error ", MessageBoxPers.Messagetype.Error);
+                            Transaction.Rollback();
+                        }
+                    }
+                    textNombre.Text = "";
+                    textFrmNombre.Text = "";
+                    listBox_modulos.SelectedItem = null;
+                    listBox_submodulos.SelectedItem = null;
+                } 
+            }
+            else
+            {
+                MessageBoxPers.message("Los campos no pueden estar en blanco", MessageBoxPers.Messagetype.Informacion);
+            }
         }
     }
    

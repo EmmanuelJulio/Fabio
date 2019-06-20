@@ -144,6 +144,6 @@
         public System.Windows.Forms.PictureBox btn_normalWindow;
         public System.Windows.Forms.PictureBox btn_CloseForm;
         public System.Windows.Forms.Panel pnl_nav;
-        private System.Windows.Forms.Button btn_desacoplar;
+        public System.Windows.Forms.Button btn_desacoplar;
     }
 }

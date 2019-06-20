@@ -76,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bulonera2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Configuraciones\Modulos\clsModulos.cs" />
     <Compile Include="Configuraciones\Modulos\frm_submenus.cs">
       <SubType>Form</SubType>
     </Compile>

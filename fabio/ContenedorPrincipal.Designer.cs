@@ -31,7 +31,7 @@ namespace fabio
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContenedorPrincipal));
             this.PNL_BarraControl = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -40,6 +40,7 @@ namespace fabio
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.cabezera = new System.Windows.Forms.Panel();
             this.Pnl_subsubmdoulos = new System.Windows.Forms.Panel();
             this.botonSub3 = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@ namespace fabio
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelAnimator = new BunifuAnimatorNS.Animator(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.contenedor = new System.Windows.Forms.Panel();
             this.PNL_BarraControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -86,9 +86,9 @@ namespace fabio
             this.PNL_BarraControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.PNL_BarraControl.ForeColor = System.Drawing.Color.MediumBlue;
             this.PNL_BarraControl.Location = new System.Drawing.Point(0, 0);
-            this.PNL_BarraControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PNL_BarraControl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.PNL_BarraControl.Name = "PNL_BarraControl";
-            this.PNL_BarraControl.Size = new System.Drawing.Size(1083, 23);
+            this.PNL_BarraControl.Size = new System.Drawing.Size(1263, 30);
             this.PNL_BarraControl.TabIndex = 0;
             // 
             // pictureBox3
@@ -97,10 +97,10 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1003, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(1171, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 23);
+            this.pictureBox3.Size = new System.Drawing.Size(23, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -112,10 +112,10 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.pictureBox4, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1023, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(1194, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 23);
+            this.pictureBox4.Size = new System.Drawing.Size(23, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
@@ -128,7 +128,7 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.bunifuCustomLabel1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(23, 5);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(27, 7);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(108, 16);
             this.bunifuCustomLabel1.TabIndex = 3;
@@ -140,10 +140,10 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1043, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1217, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 23);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -155,10 +155,10 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1063, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1240, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(23, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -170,12 +170,22 @@ namespace fabio
             this.panel1.Controls.Add(this.contenedor);
             this.panel1.Controls.Add(this.cabezera);
             this.PanelAnimator.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 626);
+            this.panel1.Size = new System.Drawing.Size(1263, 805);
             this.panel1.TabIndex = 2;
+            // 
+            // contenedor
+            // 
+            this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.PanelAnimator.SetDecoration(this.contenedor, BunifuAnimatorNS.DecorationType.None);
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(698, 0);
+            this.contenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(565, 805);
+            this.contenedor.TabIndex = 1;
             // 
             // cabezera
             // 
@@ -187,8 +197,9 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.cabezera, BunifuAnimatorNS.DecorationType.None);
             this.cabezera.Dock = System.Windows.Forms.DockStyle.Left;
             this.cabezera.Location = new System.Drawing.Point(0, 0);
+            this.cabezera.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cabezera.Name = "cabezera";
-            this.cabezera.Size = new System.Drawing.Size(598, 626);
+            this.cabezera.Size = new System.Drawing.Size(698, 805);
             this.cabezera.TabIndex = 0;
             // 
             // Pnl_subsubmdoulos
@@ -196,17 +207,19 @@ namespace fabio
             this.Pnl_subsubmdoulos.Controls.Add(this.botonSub3);
             this.PanelAnimator.SetDecoration(this.Pnl_subsubmdoulos, BunifuAnimatorNS.DecorationType.None);
             this.Pnl_subsubmdoulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Pnl_subsubmdoulos.Location = new System.Drawing.Point(398, 91);
+            this.Pnl_subsubmdoulos.Location = new System.Drawing.Point(464, 119);
+            this.Pnl_subsubmdoulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Pnl_subsubmdoulos.Name = "Pnl_subsubmdoulos";
-            this.Pnl_subsubmdoulos.Size = new System.Drawing.Size(200, 535);
+            this.Pnl_subsubmdoulos.Size = new System.Drawing.Size(233, 686);
             this.Pnl_subsubmdoulos.TabIndex = 4;
             // 
             // botonSub3
             // 
             this.PanelAnimator.SetDecoration(this.botonSub3, BunifuAnimatorNS.DecorationType.None);
-            this.botonSub3.Location = new System.Drawing.Point(25, 238);
+            this.botonSub3.Location = new System.Drawing.Point(29, 311);
+            this.botonSub3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonSub3.Name = "botonSub3";
-            this.botonSub3.Size = new System.Drawing.Size(163, 48);
+            this.botonSub3.Size = new System.Drawing.Size(190, 63);
             this.botonSub3.TabIndex = 2;
             this.botonSub3.Text = "Seleccion de frame";
             this.botonSub3.UseVisualStyleBackColor = true;
@@ -218,17 +231,19 @@ namespace fabio
             this.pnl_submodulos.Controls.Add(this.botonSub);
             this.PanelAnimator.SetDecoration(this.pnl_submodulos, BunifuAnimatorNS.DecorationType.None);
             this.pnl_submodulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_submodulos.Location = new System.Drawing.Point(198, 91);
+            this.pnl_submodulos.Location = new System.Drawing.Point(231, 119);
+            this.pnl_submodulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnl_submodulos.Name = "pnl_submodulos";
-            this.pnl_submodulos.Size = new System.Drawing.Size(200, 535);
+            this.pnl_submodulos.Size = new System.Drawing.Size(233, 686);
             this.pnl_submodulos.TabIndex = 3;
             // 
             // botonSub
             // 
             this.PanelAnimator.SetDecoration(this.botonSub, BunifuAnimatorNS.DecorationType.None);
-            this.botonSub.Location = new System.Drawing.Point(6, 238);
+            this.botonSub.Location = new System.Drawing.Point(7, 311);
+            this.botonSub.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonSub.Name = "botonSub";
-            this.botonSub.Size = new System.Drawing.Size(177, 48);
+            this.botonSub.Size = new System.Drawing.Size(206, 63);
             this.botonSub.TabIndex = 1;
             this.botonSub.Text = "Seleccion de opcion";
             this.botonSub.UseVisualStyleBackColor = true;
@@ -240,18 +255,20 @@ namespace fabio
             this.Panel_botones.Controls.Add(this.boton);
             this.PanelAnimator.SetDecoration(this.Panel_botones, BunifuAnimatorNS.DecorationType.None);
             this.Panel_botones.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_botones.Location = new System.Drawing.Point(0, 91);
+            this.Panel_botones.Location = new System.Drawing.Point(0, 119);
+            this.Panel_botones.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Panel_botones.Name = "Panel_botones";
-            this.Panel_botones.Size = new System.Drawing.Size(198, 535);
+            this.Panel_botones.Size = new System.Drawing.Size(231, 686);
             this.Panel_botones.TabIndex = 2;
             // 
             // boton
             // 
             this.PanelAnimator.SetDecoration(this.boton, BunifuAnimatorNS.DecorationType.None);
             this.boton.ForeColor = System.Drawing.Color.Gray;
-            this.boton.Location = new System.Drawing.Point(27, 238);
+            this.boton.Location = new System.Drawing.Point(31, 311);
+            this.boton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boton.Name = "boton";
-            this.boton.Size = new System.Drawing.Size(155, 48);
+            this.boton.Size = new System.Drawing.Size(181, 63);
             this.boton.TabIndex = 0;
             this.boton.Text = "seleccion de modulo";
             this.boton.UseVisualStyleBackColor = true;
@@ -265,9 +282,10 @@ namespace fabio
             this.panel2.Controls.Add(this.lbl_texto);
             this.PanelAnimator.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Location = new System.Drawing.Point(0, 89);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(598, 23);
+            this.panel2.Size = new System.Drawing.Size(698, 30);
             this.panel2.TabIndex = 1;
             // 
             // Btn_volveropciones
@@ -275,9 +293,10 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.Btn_volveropciones, BunifuAnimatorNS.DecorationType.None);
             this.Btn_volveropciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.Btn_volveropciones.Image = ((System.Drawing.Image)(resources.GetObject("Btn_volveropciones.Image")));
-            this.Btn_volveropciones.Location = new System.Drawing.Point(26, 0);
+            this.Btn_volveropciones.Location = new System.Drawing.Point(30, 0);
+            this.Btn_volveropciones.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_volveropciones.Name = "Btn_volveropciones";
-            this.Btn_volveropciones.Size = new System.Drawing.Size(26, 23);
+            this.Btn_volveropciones.Size = new System.Drawing.Size(30, 30);
             this.Btn_volveropciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_volveropciones.TabIndex = 5;
             this.Btn_volveropciones.TabStop = false;
@@ -290,8 +309,9 @@ namespace fabio
             this.Btn_volvermodulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.Btn_volvermodulos.Image = ((System.Drawing.Image)(resources.GetObject("Btn_volvermodulos.Image")));
             this.Btn_volvermodulos.Location = new System.Drawing.Point(0, 0);
+            this.Btn_volvermodulos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_volvermodulos.Name = "Btn_volvermodulos";
-            this.Btn_volvermodulos.Size = new System.Drawing.Size(26, 23);
+            this.Btn_volvermodulos.Size = new System.Drawing.Size(30, 30);
             this.Btn_volvermodulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Btn_volvermodulos.TabIndex = 3;
             this.Btn_volvermodulos.TabStop = false;
@@ -304,7 +324,7 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.lbl_texto, BunifuAnimatorNS.DecorationType.None);
             this.lbl_texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_texto.ForeColor = System.Drawing.Color.Silver;
-            this.lbl_texto.Location = new System.Drawing.Point(32, 2);
+            this.lbl_texto.Location = new System.Drawing.Point(37, 3);
             this.lbl_texto.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.lbl_texto.Name = "lbl_texto";
             this.lbl_texto.Size = new System.Drawing.Size(66, 18);
@@ -318,18 +338,19 @@ namespace fabio
             this.PanelAnimator.SetDecoration(this.logo, BunifuAnimatorNS.DecorationType.None);
             this.logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(598, 68);
+            this.logo.Size = new System.Drawing.Size(698, 89);
             this.logo.TabIndex = 0;
             // 
             // pictureBox5
             // 
             this.PanelAnimator.SetDecoration(this.pictureBox5, BunifuAnimatorNS.DecorationType.None);
             this.pictureBox5.Image = global::fabio.Properties.Resources.logo_fabio_vectorizado;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(14, 10);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(149, 56);
+            this.pictureBox5.Size = new System.Drawing.Size(174, 73);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -345,45 +366,35 @@ namespace fabio
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.PanelAnimator.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation2;
-            // 
-            // contenedor
-            // 
-            this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.PanelAnimator.SetDecoration(this.contenedor, BunifuAnimatorNS.DecorationType.None);
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(598, 0);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(485, 626);
-            this.contenedor.TabIndex = 1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation3;
             // 
             // ContenedorPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 649);
+            this.ClientSize = new System.Drawing.Size(1263, 849);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PNL_BarraControl);
             this.PanelAnimator.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ContenedorPrincipal";
             this.Text = "ContenedorPrincipal";
             this.Load += new System.EventHandler(this.ContenedorPrincipal_Load);

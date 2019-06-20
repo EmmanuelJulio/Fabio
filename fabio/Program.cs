@@ -16,9 +16,11 @@ namespace fabio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Login lg = new Login();
-            fabio.Configuraciones.Modulos.frm_submenus lg = new fabio.Configuraciones.Modulos.frm_submenus();
-           Application.Run(lg);
+            Login lg = new Login();
+           //fabio.Configuraciones.Modulos.frm_submenus lg = new fabio.Configuraciones.Modulos.frm_submenus();
+
+
+            Application.Run(lg);
             
         }
     }
