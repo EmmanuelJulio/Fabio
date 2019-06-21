@@ -131,7 +131,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 623</value>
+    <value>1033, 610</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_desacoplar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -143,8 +143,11 @@
   <data name="btn_desacoplar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 8.25pt</value>
   </data>
+  <data name="btn_desacoplar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_desacoplar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>774, 0</value>
+    <value>807, 0</value>
   </data>
   <data name="btn_desacoplar.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 23</value>
@@ -173,6 +176,9 @@
   </data>
   <data name="lbl_modulo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lbl_modulo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_modulo.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
@@ -224,8 +230,11 @@
         gg==
 </value>
   </data>
+  <data name="btn_MinimizeWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_MinimizeWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>916, 0</value>
+    <value>949, 0</value>
   </data>
   <data name="btn_MinimizeWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -270,8 +279,11 @@
         AMPOBAiy/7F8b+77/qDPAQAAAAAAAAAAAAA/cDp9APAVGAaelvdjAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btn_MaximiseWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_MaximiseWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>937, 0</value>
+    <value>970, 0</value>
   </data>
   <data name="btn_MaximiseWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -325,8 +337,11 @@
         rkJggg==
 </value>
   </data>
+  <data name="btn_normalWindow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_normalWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>958, 0</value>
+    <value>991, 0</value>
   </data>
   <data name="btn_normalWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -376,8 +391,11 @@
         zi0p/4AEAAAAAAAAAAAAAAAAVpjN/gAoAFbSYZnErQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btn_CloseForm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btn_CloseForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>979, 0</value>
+    <value>1012, 0</value>
   </data>
   <data name="btn_CloseForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -413,7 +431,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="pnl_nav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 23</value>
+    <value>1033, 23</value>
   </data>
   <data name="pnl_nav.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1320,6 +1338,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAA
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

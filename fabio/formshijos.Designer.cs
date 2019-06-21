@@ -34,11 +34,11 @@
             this.pnl_nav = new System.Windows.Forms.Panel();
             this.btn_desacoplar = new System.Windows.Forms.Button();
             this.lbl_modulo = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_MinimizeWindow = new System.Windows.Forms.PictureBox();
             this.btn_MaximiseWindow = new System.Windows.Forms.PictureBox();
             this.btn_normalWindow = new System.Windows.Forms.PictureBox();
             this.btn_CloseForm = new System.Windows.Forms.PictureBox();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnl_nav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MinimizeWindow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_MaximiseWindow)).BeginInit();
@@ -80,6 +80,13 @@
             this.lbl_modulo.ForeColor = System.Drawing.Color.Silver;
             this.lbl_modulo.Name = "lbl_modulo";
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = false;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.pnl_nav;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // btn_MinimizeWindow
             // 
             resources.ApplyResources(this.btn_MinimizeWindow, "btn_MinimizeWindow");
@@ -107,13 +114,6 @@
             this.btn_CloseForm.Name = "btn_CloseForm";
             this.btn_CloseForm.TabStop = false;
             this.btn_CloseForm.Click += new System.EventHandler(this.Btn_CloseForm_Click);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = false;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.pnl_nav;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // formshijos
             // 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace fabio.Fabio.Productos
 {
-    public partial class Form1 : Form
+    public partial class Form1 : formshijos
     {
         public Form1()
         {

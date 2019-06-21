@@ -31,7 +31,7 @@ namespace fabio
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContenedorPrincipal));
             this.PNL_BarraControl = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -181,10 +181,10 @@ namespace fabio
             this.contenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.PanelAnimator.SetDecoration(this.contenedor, BunifuAnimatorNS.DecorationType.None);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(698, 0);
+            this.contenedor.Location = new System.Drawing.Point(703, 0);
             this.contenedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(565, 805);
+            this.contenedor.Size = new System.Drawing.Size(560, 805);
             this.contenedor.TabIndex = 1;
             // 
             // cabezera
@@ -199,7 +199,7 @@ namespace fabio
             this.cabezera.Location = new System.Drawing.Point(0, 0);
             this.cabezera.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cabezera.Name = "cabezera";
-            this.cabezera.Size = new System.Drawing.Size(698, 805);
+            this.cabezera.Size = new System.Drawing.Size(703, 805);
             this.cabezera.TabIndex = 0;
             // 
             // Pnl_subsubmdoulos
@@ -285,7 +285,7 @@ namespace fabio
             this.panel2.Location = new System.Drawing.Point(0, 89);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(698, 30);
+            this.panel2.Size = new System.Drawing.Size(703, 30);
             this.panel2.TabIndex = 1;
             // 
             // Btn_volveropciones
@@ -340,7 +340,7 @@ namespace fabio
             this.logo.Location = new System.Drawing.Point(0, 0);
             this.logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(698, 89);
+            this.logo.Size = new System.Drawing.Size(703, 89);
             this.logo.TabIndex = 0;
             // 
             // pictureBox5
@@ -366,22 +366,22 @@ namespace fabio
             // 
             this.PanelAnimator.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.PanelAnimator.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.PanelAnimator.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.PanelAnimator.DefaultAnimation = animation1;
             // 
             // ContenedorPrincipal
             // 

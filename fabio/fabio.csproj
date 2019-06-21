@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Fabio\Productos\frm_hilosxpul.resx">
       <DependentUpon>frm_hilosxpul.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fabio\Productos\frm_lineas.resx">
+      <DependentUpon>frm_lineas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formshijos.es-419.resx">
       <DependentUpon>formshijos.cs</DependentUpon>
     </EmbeddedResource>
